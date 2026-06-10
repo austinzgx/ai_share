@@ -103,6 +103,16 @@
   </span>
 </div>
 
- <video controls autoplay loop muted w-full rounded-lg>
-    <source src="https://www.bilibili.com/video/BV1y9Ed6EEke/" type="video/mp4">
-</video>
+<div style="max-width: 1280px"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe src="https://schneiderelectric-my.sharepoint.com/personal/sesa603477_se_com/_layouts/15/embed.aspx?UniqueId=455a8ffa-ffbe-47bf-8444-59670ce41345&embed=%7B%22af%22%3Atrue%2C%22ust%22%3Afalse%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="dpms.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe></div></div>
+
+ <iframe  src="https://schneiderelectric-my.sharepoint.com/:v:/r/personal/sesa603477_se_com/Documents/Recordings/dpms.mp4?csf=1&web=1&e=TUXaQL" >
+</iframe>
+
+<iframe src="https://schneiderelectric-my.sharepoint.com/:v:/r/personal/sesa603477_se_com/Documents/Recordings/dpms.mp4?csf=1&web=1&e=HobpB1"></iframe>
+
+https://schneiderelectric-my.sharepoint.com/:v:/r/personal/sesa603477_se_com/Documents/Recordings/dpms.mp4?csf=1&web=1&e=TUXaQL
+
+
+https://schneiderelectric-my.sharepoint.com/personal/sesa603477_se_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fsesa603477_se_com%2FDocuments%2FRecordings%2Fdpms%2Emp4
+
+https://schneiderelectric-my.sharepoint.com/personal/sesa603477_se_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fsesa603477%5Fse%5Fcom%2FDocuments%2FRecordings%2Fdpms%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ea62827af%2Dc599%2D4e93%2D8b86%2D3dcb0184ca08
