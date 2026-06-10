@@ -1,0 +1,6 @@
+/* Reduce default slide padding */
+.slidev-layout {
+  padding: 1rem 2rem !important;
+}
+
+
