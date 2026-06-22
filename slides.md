@@ -31,70 +31,6 @@ background: https://raw.githubusercontent.com/austinzgx/pic/master/apc_plum.png
 * ✅ 敢于把业务需求转化成工具尝试
 
 ---
-
-# 认知说明
-
-1. 你不需要成为程序员，但你已经拥有了一个程序员团队（AI）
-2. 未来不是会不会写代码的问题，而是能不能把想法说清楚，让AI帮你实现,采用Vibe Coding的方式
-
-1.  vibe coding 本质: “描述需求 + 让AI实现 + 你来判断”
-
-👉 一个循环：
-想法 → 描述 → AI生成 → 测试 → 修改
-
-2. 你需要的能力不是写代码，而是：
-    * 清楚表达需求
-    * 能判断结果对不对
-    * 会逐步拆解问题
-
-
-
-❌ 我要先学编程再开始  →  ✅ 边做边学，直接开始
-❌ 一上来就做完整系统  →  ✅ 从一个小工具开始
-❌ AI一次必须做对  →  ✅ 多轮对话不断优化
-❌ 看不懂代码就用不了  →  ✅ 会用 + 会改需求就够
-❌ 这个太简单没价值  →  ✅ 小工具也能提升效率
-❌ 业务太复杂AI做不了  →  ✅ 越贴近业务越有价值
-
-Vibe Coding的门槛不是技术，而是：敢开始 + 愿意试 + 接受不完美
-
----
-layout: two-cols
----
-
-# 实战感受AI开发应用流程
-
-> 5min Vibe Coding 实现团队ToDoList看板工具
-
-帮我生成一个待办事项Web应用：
-
-功能：
-1. 添加任务
-2. 标记完成
-3. 删除
-4. 页面要简洁
-
-用HTML + CSS + JavaScript实现
-
-
-::right::
-
-### 应用场景建议
-* 销售类
-  * 客户跟进管理
-  * 项目进度看板
-  * 报价记录工具
-  * 客户培训web
-* 管理类
-  * 团队任务看板  
-  * KPI tracking工具
-  * 会议纪要整理网页
-* 生活类（降低心理门槛）
-  * 健身记录
-  * 旅行计划
-  * 鸡兔同笼儿童教学
-
----
 layout: default
 clicks: 7
 ---
@@ -174,49 +110,37 @@ layout: two-cols
 
 ---
 layout: two-cols
-clicks: 6
 ---
 
-<h1 flex items-center gap-3>
-  <span text-3xl>🔧</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>你每天可能遇到的痛点</span>
-</h1>
+# 建立信息的认知说明
+> Vibe Coding的门槛不是技术，而是：敢开始 + 愿意试 + 小步迭代 
 
-<div mt-6 />
+1. 你不需要成为程序员，但你已经拥有了一个程序员团队（AI）
+2. 未来不是会不会写代码的问题，而是能不能把想法说清楚，让AI帮你实现,采用Vibe Coding的方式
 
-<v-clicks>
+1.  vibe coding 本质: “描述需求 + 让AI实现 + 你来判断”
 
-- 📋 设备巡检还在用纸质表，月底汇总费时又容易出错
-- 📊 产线数据散落在无数个Excel里，想看实时看板无从下手
-- 🔧 备件库存靠人脑记忆，缺件了才发现，停线等件
-- 📝 交接班记录写在笔记本上，过几天找不到了，无法追溯
-- ⚠️ 设备异常没有自动通知，每次都是出了问题才知道
-- 📈 领导要报表，每周手动复制粘贴做一次
+👉 一个循环：
+想法 → 描述 → AI生成 → 测试 → 修改
 
-</v-clicks>
+4. 你需要的能力不是写代码，而是：
+    * 清楚表达需求
+    * 能判断结果对不对
+    * 会逐步拆解问题
 
 ::right::
 
-<div flex items-center justify-center h-full>
-  <div
-    border="~ green-400/40"
-    bg="green-400/5"
-    rounded-2xl
-    p-8
-    text-center
-  >
-    <div text-5xl mb-4>💡</div>
-    <div text-xl font-bold mb-2>
-      <span text-green-400>这些都可以</span>
-    </div>
-    <div text-xl font-bold mb-4>
-      用一个简单的Web应用解决
-    </div>
-    <div text-base opacity-70>
-      今天之后，你就能自己动手做出来
-    </div>
-  </div>
-</div>
+
+
+### 误区
+
+* ❌ 我要先学编程再开始  →  ✅ 边做边学，直接开始
+* ❌ 一上来就做完整系统  →  ✅ 从一个小工具开始
+* ❌ AI一次必须做对  →  ✅ 多轮对话不断优化
+* ❌ 看不懂代码就用不了  →  ✅ 会用 + 会改需求就够
+* ❌ 这个太简单没价值  →  ✅ 小工具也能提升效率
+* ❌ 业务太复杂AI做不了  →  ✅ 越贴近业务越有价值
+
 
 ---
 layout: section
@@ -1198,6 +1122,40 @@ claude
 ```
   <div text-sm opacity-75 mt-2>然后就可以对话了</div>
 </div>
+
+---
+
+# 实战感受AI开发应用流程
+
+> 5min Vibe Coding 实现团队ToDoList看板工具
+
+帮我生成一个待办事项Web应用：
+
+功能：
+1. 添加任务
+2. 标记完成
+3. 删除
+4. 页面要简洁
+
+用HTML + CSS + JavaScript实现
+
+
+::right::
+
+### 应用场景建议
+* 销售类
+  * 客户跟进管理
+  * 项目进度看板
+  * 报价记录工具
+  * 客户培训web
+* 管理类
+  * 团队任务看板  
+  * KPI tracking工具
+  * 会议纪要整理网页
+* 生活类（降低心理门槛）
+  * 健身记录
+  * 旅行计划
+  * 鸡兔同笼儿童教学
 
 ---
 layout: default
