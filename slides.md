@@ -8,551 +8,289 @@ layout: cover
 background: https://raw.githubusercontent.com/austinzgx/pic/master/apc_plum.png
 ---
 
-<div abs-tl left-15 top-45 text-16 font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-400 to-blue-500>编程与AI实战工作坊</div>
+<div abs-tl left-15 top-45 text-16 font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-400 to-blue-500>AI实战工作坊</div>
 
 <div abs-tl left-15 top-75 text-2xl>
-从零基础到上线部署，用 Claude Code 打造你的第一个业务应用
+Claude Code 助力工作效率提升
 </div>
 <div abs-bl left-15 bottom-10 flex="~ col" text-sm text-left>
-  <div>每个人都能成为创造者</div>
-  <div text-sm opacity-50>2026年6月</div>
+  <div>张官祥 </div>
+  <div>18519299525</div>
+  <div text-sm opacity-50>2026年7月</div>
 </div>
 
 ---
+layout: section
+---
 
-# 培训分享目标
+<h1 text-4xl font-bold>
+  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 1：基础AI知识</span>
+</h1>
 
+<div text-xl opacity-60 mt-4>CC使用技巧与最佳实践分享</div>
+
+---
+
+# 大模型 + Agent 
+
+LLM + (Tool Use / Function Calling)  
+
+它标志着 AI 模型从单纯的“文本生成器”进化为能够与其环境交互的“智能代理”（Agent）。
+
+简单来说，工具使用 是指 Claude 等模型能够理解开发者定义的外部函数或 API，并在对话过程中根据用户的需求，自主判断、决策并生成调用这些工具所需的参数（通常是 JSON 格式）。
+
+
+---
+layout: section
+---
+
+<h1 text-4xl font-bold>
+  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 2：安装使用Claude Code</span>
+</h1>
+
+<div text-xl opacity-60 mt-4>CC使用技巧与最佳实践分享</div>
+
+---
+layout: default
+---
+
+# CC安装配置
+
+  <div border="~ green-400/20" bg="green-400/5" rounded-xl p-4>
+    <div text-xl mb-2>🖥️</div>
+    <div text-green-400 font-bold mb-2>公司电脑方案</div>
+    <ul text-xs space-y-1 opacity-75>
+      <li>安装 Vmware 虚拟机（2929IT热线 输入管理员密码）</li>
+      <li>虚拟机中安装 Linux 操作系统</li>
+      <li>已集成：Chrome、Node、Git</li>
+    </ul>
+    <div text-xs mt-2 opacity-50>不建议直接在 Windows 里安装，后续配置需管理员密码</div>
+   
+  </div>
+
+
+  <div border="~ green-400/20" bg="green-400/5" rounded-xl p-4>
+    <div text-xl mb-2>💻</div>
+    <div text-green-400 font-bold mb-2>个人电脑方案</div>
+    <ul text-xs space-y-1 opacity-75>
+      <li>系统干净，安装配置无限制</li>
+      <li>与公司电脑切换使用</li>
+      <li>文件交互通过网盘/Git</li>
+    </ul>
+  </div>
+
+---
+
+# 其他配套
+
+  <div border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4>
+    <div text-xl mb-2>🤖</div>
+    <div text-blue-400 font-bold mb-2>Claude Code 安装</div>
+    <div text-xs opacity-75 mb-1>
+      <a href="https://code.claude.com/docs/en/overview" target="_blank">官方安装文档</a>
+    </div>
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+</div>
+
+  <div border="~ orange-400/20" bg="orange-400/5" rounded-xl p-4>
+    <div text-xl mb-2>📦</div>
+    <div text-orange-400 font-bold mb-2>可选配套工具</div>
+    <ul text-xs space-y-1 opacity-75>
+      <li><strong>Git</strong> — 代码版本管理</li>
+      <li><strong>GitHub</strong> — 代码托管平台</li>
+      <li><strong>Netlify</strong> — Web应用部署</li>
+    </ul>
+  </div>
+
+---
+
+# Claude Code
+
+是由 Anthropic 推出的终端原生 AI 编程助手。它直接运行在开发者电脑的命令行中，不仅能生成代码，还能自主读取整个项目、跨文件修改、运行 Shell 命令和测试，是实现人机协同开发的强大工具。
+## CLI与网页版AI有何不同
+* 上下文感知（Context-Aware）： 网页版聊天机器人只知道你粘贴给它的代码片段；而 Claude Code 会扫描你整个代码库，对项目结构、文件依赖和业务逻辑有全局理解。
+* 智能体能力（Agentic）： 它不仅仅是“给出建议”，而是能够像人类开发者一样“做事”。你可以让它修复特定的 bug，它会自主搜索错误文件、修改代码并尝试运行。
+* 原生终端操作： 无需离开终端，它就能读写文件、执行 Shell 命令、查看 Git 状态甚至安装依赖包。
+
+---
+
+# CC Switch
+
+封号风险 → 使用 <strong text-green-300>CC Switch</strong> 切换模型<br/>
+
+DeepSeek v4-pro 付费：<a href="https://platform.deepseek.com/" target="_blank">platform.deepseek.com</a>
+
+---
+
+# Prompt
+
+三大基石：Clear, Direct, Specific
+所有高级技巧都建立在清晰的表达之上。
+
+* 消除歧义：不要让 AI 猜。
+* 肯定指令：告诉它做什么，而不是不做什么。
+* 具体语境：像给新员工派活一样交代背景。
+
+---
+
+# Skills
+
+Skills 是 Claude 生态的最新拼图。它解决的是“复用性”问题。
+
+如果你教会了 Claude “如何撰写符合公司规范的周报”，由于 Context 会重置，下次还得重教一遍。 Skills 允许你将这套指令（Prompt + 相关资料 + 示例）打包成一个“技能包”。
+
+当在 Claude.ai 或企业版中使用时，系统会根据请求自动挂载相关的 Skill。
+
+这相当于给 Claude 安装了“插件”，让它瞬间变成“资深法务”、“专业会计”或“Python 专家”。
+
+1. agent-browser 允许 AI 直接调用无头浏览器执行自动化网页交互和数据抓取。
+2. PDF Master：文档处理神器，支持 PDF 的合并、拆分、提取、OCR 甚至签名。
+3. PPT Master: AI 生成原生可编辑 PPTX，支持任意文档输入
+
+---
+layout: section
+---
+
+<h1 text-4xl font-bold>
+  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 3：AI常用提效工具</span>
+</h1>
+
+<div text-xl opacity-60 mt-4>PPT</div>
+
+
+---
+layout: section
+---
+
+<h1 text-4xl font-bold>
+  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 4：Vibe Coding</span>
+</h1>
+
+<div text-xl opacity-60 mt-4>你的AI编程搭档，和全新的编程方式</div>
+
+---
+
+# 提纲
 不是教大家写代码，而是让你有能力用AI帮你做一个属于自己的小工具
 
-明确3个结果：
 
 * ✅ 每个人能在自己电脑跑起来一个Web应用，并可部署到互联网
 * ✅ 知道怎么用AI一步步“对话开发”
 * ✅ 敢于把业务需求转化成工具尝试
-
----
-layout: default
-clicks: 7
----
-
-<h1 flex items-center gap-3>
-  <span text-3xl>📋</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>今天你会收获什么</span>
-</h1>
-
-<div mt-10 />
-
-<v-clicks>
-
-- 🎯 **理解编程的本质** —— 它和你熟悉的PLC编程有什么异同？
-- 📚 **掌握编程的核心概念** —— 用工业场景的例子来学
-- 🌐 **看懂Web应用的全貌** —— 前端、后端、数据库
 - 🤖 **上手 Claude Code** —— 你的AI编程搭档
 - ✨ **掌握 Vibe Coding** —— 用对话的方式写应用
-- 🏭 **动手做出一个真实业务应用** —— 设备巡检管理系统
+- 🏭 **动手做出一个真实业务应用** —— 团队待办事项看板
+- 🌐 **看懂Web应用的全貌** —— 前端、后端、数据库
 - 🚀 **部署到互联网** —— 用手机扫码就能用
 
-</v-clicks>
-
 ---
-layout: two-cols
+layout: center
 ---
 
-<h1 flex items-center gap-3>
-  <span text-3xl>💡</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>为什么你需要懂编程？</span>
+<h1 text-3xl font-bold text-center mb-6>
+  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>一个重要的思维转变</span>
 </h1>
 
-<div mt-8 />
-
-<div
-  border="l-4 green-400"
-  bg="green-400/10"
-  rounded-r-lg
-  p-4
-  text-lg
-  font-bold
->
-  其实你已经会"编程"了 —— 只是没意识到。
-</div>
-
-<div mt-6 />
-
-| 你熟悉的 | 本质上就是编程 |
-|---|---|
-| PLC梯形图/功能块 | 条件判断 + 执行逻辑 |
-| SCADA系统组态 | 数据采集 + 可视化配置 |
-| HMI画面制作 | 界面设计 + 交互逻辑 |
-| 继电保护整定 | 参数配置 + 逻辑规则 |
-
-::right::
-
-<div flex items-center justify-center h-full>
-<div
-  border="~ green-400/30"
-  bg="green-400/5"
-  rounded-xl
-  p-6
->
-  <div text-lg font-bold mb-3>
-    <span text-green-400>你缺的不是编程思维</span>
+<div flex justify-center gap-8 mt-8>
+  <div border="~ red-400/30" bg="red-400/5" rounded-2xl p-6 flex-1>
+    <div text-2xl mb-3 text-center>❌ 传统学编程</div>
+    <div text-sm opacity-75>
+      学语法 → 记API → 看教程 →<br/>
+      写代码 → 出bug → 搜索 →<br/>
+      改代码 → 又出bug → 再搜 →<br/>
+      <strong>一个功能搞一天，数月才能上手</strong>
+    </div>
   </div>
 
-  <div text-base opacity-80>
-    只是把这种思维从PLC/HMI延伸到Web应用上。
-  </div>
-
-  <div mt-4 text-base opacity-80>
-    学完之后你会成为团队里那个<strong text-green-300>"能做工具的人"</strong>。
+  <div border="~ green-400/30" bg="green-400/5" rounded-2xl p-6 flex-1>
+    <div text-2xl mb-3 text-center>✅ AI Vibe Coding</div>
+    <div text-sm opacity-75>
+      描述需求 → Claude写代码 →<br/>
+      你运行测试 → 不满意就改 →<br/>
+      满意继续 →<br/>
+      <strong>一个功能十分钟，今天就能开始</strong>
+    </div>
   </div>
 </div>
+
+<div text-center mt-8 text-lg>
+  <strong text-green-300>你最大的价值不是写代码，而是你最懂业务需要什么。</strong>
 </div>
-
----
-layout: two-cols
----
-
-# 建立信息的认知说明
-> Vibe Coding的门槛不是技术，而是：敢开始 + 愿意试 + 小步迭代 
-
-1. 你不需要成为程序员，但你已经拥有了一个程序员团队（AI）
-2. 未来不是会不会写代码的问题，而是能不能把想法说清楚，让AI帮你实现,采用Vibe Coding的方式
-
-1.  vibe coding 本质: “描述需求 + 让AI实现 + 你来判断”
-
-👉 一个循环：
-想法 → 描述 → AI生成 → 测试 → 修改
-
-4. 你需要的能力不是写代码，而是：
-    * 清楚表达需求
-    * 能判断结果对不对
-    * 会逐步拆解问题
-
-::right::
-
-
-
-### 误区
-
-* ❌ 我要先学编程再开始  →  ✅ 边做边学，直接开始
-* ❌ 一上来就做完整系统  →  ✅ 从一个小工具开始
-* ❌ AI一次必须做对  →  ✅ 多轮对话不断优化
-* ❌ 看不懂代码就用不了  →  ✅ 会用 + 会改需求就够
-* ❌ 这个太简单没价值  →  ✅ 小工具也能提升效率
-* ❌ 业务太复杂AI做不了  →  ✅ 越贴近业务越有价值
-
-
----
-layout: section
----
-
-<h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>第一部分：编程基础概念</span>
-</h1>
-
-<div text-xl opacity-60 mt-4>用你熟悉的工业语言重新理解编程</div>
 
 ---
 layout: two-cols-header
 ---
 
-<h1 flex items-center gap-3 mb-6>
-  <span text-3xl>📡</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>编程到底是什么？</span>
-</h1>
+# 关于AI基本概念
+核心认知：你已经是”创造者”
+
+  Vibe Coding 的门槛不是技术，而是：<strong text-green-300>敢开始 + 愿意试 + 小步迭代</strong>
 
 ::left::
-
-<div border="~ gray-700" rounded-xl p-5>
-  <div text-center text-lg font-bold mb-3 text-amber-400>PLC 控制电机启动</div>
-
-```text
-输入：启动按钮按下
-  ↓
-逻辑：检查安全条件、联锁状态
-  ↓
-输出：接触器吸合、电机运转
-```
+<div mt-4 space-y-3>
+  <div border=”~ green-400” bg=”green-400/5” rounded-lg p-3>
+    <div text-green-400 text-sm font-bold>1. 你已拥有一个AI开发团队</div>
+    <div text-xs opacity-70>未来不是会不会写代码，而是能不能把想法说清楚，让AI帮你实现</div>
+  </div>
+  <div border=”~ green-400” bg=”green-400/5” rounded-lg p-3>
+    <div text-green-400 text-sm font-bold>2. Vibe Coding = 对话编程</div>
+    <div text-xs opacity-70>想法 → 描述需求 → AI生成代码 → 你测试 → 修改迭代</div>
+  </div>
+  <div border=”~ green-400” bg=”green-400/5” rounded-lg p-3>
+    <div text-green-400 text-sm font-bold>3. 你的核心能力不是写代码</div>
+    <div text-xs opacity-70>清楚表达需求 · 能判断结果对不对 · 会逐步拆解问题</div>
+  </div>
 </div>
 
 ::right::
 
-<div border="~ gray-700" rounded-xl p-5>
-  <div text-center text-lg font-bold mb-3 text-green-400>Web 应用处理巡检记录</div>
-
-```text
-输入：用户填写巡检表单
-  ↓
-逻辑：校验数据、判断是否异常
-  ↓
-输出：记录保存、列表显示
-```
+<div text-lg font-bold mb-4>
+  <span text-green-400>🔍 常见误区</span>
 </div>
 
-<div text-center mt-6 text-base opacity-70>
-  <strong text-green-300>流程完全一样：接收输入 → 处理逻辑 → 产生输出。</strong>
-  只是表达方式从梯形图变成了代码文本。
-</div>
-
----
-layout: two-cols
----
-
-<h1 flex items-center gap-3>
-  <span text-3xl>📦</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>变量</span>
-</h1>
-
-<div mt-3 />
-
-<div
-  border="l-4 green-400"
-  bg="green-400/10"
-  rounded-r-lg
-  p-3
-  text-lg
->
-  变量 = 存放数据的容器，就像仪表上的读数
-</div>
-
-<div mt-4 />
-
-```javascript
-let equipmentName = "冲压机A-03"; // 设备名
-let temperature = 68.5;           // 运行温度
-let pressure = 2.4;              // 压力(bar)
-let isRunning = true;            // 运行状态
-let faultCode = "E001";          // 故障码
-let productionCount = 1520;      // 当日产量
-```
-
-::right::
-
-<div flex flex-col justify-center h-full>
-<div
-  border="~ green-400/30"
-  bg="green-400/5"
-  rounded-xl
-  p-5
->
-  <div text-lg font-bold mb-3>
-    <span text-green-400>类比</span>
+<div space-y-3 text-sm>
+  <div flex items-center gap-2>
+    <span text-red-400>❌ 先学编程再开始</span>
+    <span text-xs opacity-30>→</span>
+    <span text-green-400>✅ 边做边学，直接开始</span>
   </div>
-
-  ```text
-  // 就像在HMI上读取仪表值
-  console.log(equipmentName
-    + " 温度: " + temperature + "°C");
-
-  // 输出:
-  // 冲压机A-03 温度: 68.5°C
-  ```
-</div>
-
-<div mt-4 text-center text-base opacity-75>
-  变量 = 给数据起个名字，方便反复使用。<br/>
-  <strong text-green-300>和在PLC里定义一个Tag一模一样。</strong>
-</div>
-</div>
-
----
-layout: two-cols
----
-
-<h1 flex items-center gap-3>
-  <span text-3xl>🔢</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>数据类型</span>
-</h1>
-
-<div mt-3 />
-<div text-base opacity-75 mb-4>就像你区分模拟量和数字量：</div>
-
-| 类型 | 含义 | 工业场景 |
-|---|---|---|
-| 数字 | 连续值 | 温度68.5、压力2.4、转速1450 |
-| 文本 | 字符串 | 设备名、工单号 |
-| 布尔值 | 开关量 | 运行/停止、合格/不合格 |
-| 数组 | 一组值 | 每小时温度采样 |
-
-::right::
-
-<div flex items-center justify-center h-full>
-<div
-  border="~ green-400/30"
-  bg="green-400/5"
-  rounded-xl
-  p-5
->
-  <div text-lg font-bold mb-3>
-    <span text-green-400>数组示例</span>
+  <div flex items-center gap-2>
+    <span text-red-400>❌ 一上来就做完整系统</span>
+    <span text-xs opacity-30>→</span>
+    <span text-green-400>✅ 从一个小工具开始</span>
   </div>
-
-```text
-// 一天24小时温度采样
-// 就像DCS里的历史趋势数据
-let temperatureLog = [
-  68.5, 69.1, 70.2,
-  72.0, 71.5, 69.8
-];
-
-// 访问第1个小时的温度
-console.log(temperatureLog[0]); // 68.5
-```
-</div>
-</div>
-
----
-layout: two-cols
----
-
-<h1 flex items-center gap-3>
-  <span text-3xl>🗂️</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>对象</span>
-</h1>
-
-<div mt-3 />
-
-<div
-  border="l-4 green-400"
-  bg="green-400/10"
-  rounded-r-lg
-  p-3
-  text-lg
->
-  对象 = 把一台设备的所有信息打包在一起
-</div>
-
-<div mt-4 />
-
-```text
-let equipment = {
-  name: "冲压机A-03",
-  model: "SE-X200",
-  location: "一车间-2号线",
-  temperature: 68.5,
-  pressure: 2.4,
-  status: "running",
-  lastMaintenance: "2026-05-15",
-  nextMaintenance: "2026-06-15",
-  operator: "张工"
-};
-```
-
-::right::
-
-<div mt-24 />
-
-<div
-  border="~ green-400/30"
-  bg="green-400/5"
-  rounded-xl
-  p-5
->
-  <div text-lg font-bold mb-3>
-    <span text-green-400>就像设备台账里的一页</span>
+  <div flex items-center gap-2>
+    <span text-red-400>❌ AI一次必须做对</span>
+    <span text-xs opacity-30>→</span>
+    <span text-green-400>✅ 多轮对话不断优化</span>
   </div>
-
-  ```text
-  // 访问对象里的信息
-  // 就像在HMI上点选设备
-  console.log(equipment.name);
-  // 冲压机A-03
-
-  console.log(
-    equipment.lastMaintenance
-  );
-  // 2026-05-15
-  ```
-</div>
-
-<div mt-4 text-center text-base opacity-75>
-  一台设备、一个工单、一条巡检记录<br/>
-  都可以是一个对象。
-</div>
-
----
-layout: two-cols
----
-
-<h1 flex items-center gap-3>
-  <span text-3xl>⚙️</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>函数</span>
-</h1>
-
-<div mt-3 />
-
-<div
-  border="l-4 green-400"
-  bg="green-400/10"
-  rounded-r-lg
-  p-3
-  text-base
->
-  函数 = 完成特定任务的工具，就像功能块 (FB)
-</div>
-
-<div mt-3 />
-
-```text
-function checkTemperature(temp) {
-  if (temp > 75) return "⚠️ 温度过高！";
-  else if (temp > 70) return "⚠️ 注意观察";
-  else return "✅ 温度正常";
-}
-
-checkTemperature(68.5); // "✅ 温度正常"
-checkTemperature(78.0); // "⚠️ 温度过高！"
-
-function calcOEE(a, p, q) {
-  return a * p * q * 100; // 设备综合效率
-}
-```
-
-::right::
-
-<div mt-28 />
-
-<div
-  border="~ green-400/30"
-  bg="green-400/5"
-  rounded-xl
-  p-5
->
-  <div text-lg font-bold mb-3>
-    <span text-green-400>和PLC功能块 (FB) 一模一样</span>
+  <div flex items-center gap-2>
+    <span text-red-400>❌ 看不懂代码就用不了</span>
+    <span text-xs opacity-30>→</span>
+    <span text-green-400>✅ 会用 + 会改需求就够</span>
   </div>
-
-  <div text-base opacity-80>
-    把一段逻辑包装成可复用的工具。<br/>
-    定义了就能反复调用，不用重复写。
+  <div flex items-center gap-2>
+    <span text-red-400>❌ 这个太简单没价值</span>
+    <span text-xs opacity-30>→</span>
+    <span text-green-400>✅ 小工具也能提升效率</span>
+  </div>
+  <div flex items-center gap-2>
+    <span text-red-400>❌ 业务太复杂AI做不了</span>
+    <span text-xs opacity-30>→</span>
+    <span text-green-400>✅ 越贴近业务越有价值</span>
   </div>
 </div>
-
----
-layout: two-cols
----
-
-<h1 flex items-center gap-3>
-  <span text-3xl>🔀</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>条件判断</span>
-</h1>
-
-<div text-base opacity-75 mt-2 mb-6>这就是你每天都在写的联锁逻辑，只是换了一种表达方式。</div>
-
-```javascript
-let status = "fault";
-
-if (status === "running") {
-  console.log("正常运行中");
-} else if (status === "stopped") {
-  console.log("已停机，检查原因");
-} else if (status === "fault") {
-  console.log("⚠️ 通知维修班组");
-} else {
-  console.log("状态未知，现场确认");
-}
-```
-
-::right::
-
-<div mt-12 />
-
-<div border="~ amber-400/30" bg="amber-400/5" rounded-xl p-5>
-  <div text-lg font-bold mb-3 text-amber-400>PLC 梯形图对应关系</div>
-
-  <div text-sm space-y-2>
-    <div flex justify-between><span>常开触点串联</span> <span text-green-300>→ if (a && b)</span></div>
-    <div flex justify-between><span>常闭触点</span> <span text-green-300>→ if (!a)</span></div>
-    <div flex justify-between><span>输出线圈</span> <span text-green-300>→ 执行操作</span></div>
-    <div flex justify-between><span>置位/复位</span> <span text-green-300>→ s = true/false</span></div>
-    <div flex justify-between><span>定时器</span> <span text-green-300>→ setTimeout(...)</span></div>
-    <div flex justify-between><span>计数器</span> <span text-green-300>→ count++</span></div>
-  </div>
-</div>
-
----
-layout: two-cols
----
-
-<h1 flex items-center gap-3>
-  <span text-3xl>🔁</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>循环</span>
-</h1>
-
-<div mt-3 />
-
-<div
-  border="l-4 green-400"
-  bg="green-400/10"
-  rounded-r-lg
-  p-3
-  text-base
->
-  循环 = 对一组设备逐个执行检查，就像PLC轮询扫描
-</div>
-
-<div mt-3 />
-
-```text
-let equipmentList = [
-  { name: "冲压机A-01", temp: 68.5 },
-  { name: "冲压机A-02", temp: 72.0 },
-  { name: "冲压机A-03", temp: 78.2 },
-  { name: "注塑机B-01", temp: 65.0 },
-  { name: "注塑机B-02", temp: 71.5 }
-];
-
-for (let eq of equipmentList) {
-  if (eq.temp > 75) {
-    console.log("⚠️ " + eq.name
-      + " 温度超标: " + eq.temp + "°C");
-  }
-}
-```
-
-::right::
-
-<div mt-28 />
-
-<div
-  border="~ green-400/30"
-  bg="green-400/5"
-  rounded-xl
-  p-5
->
-  <div text-lg font-bold mb-3>
-    <span text-green-400>和PLC扫描周期一样</span>
-  </div>
-
-  <div text-base opacity-80>
-    对每个I/O点、每台设备，执行相同的检查逻辑。
-  </div>
-
-  <div mt-3 text-base>
-    <strong text-green-300>
-      可以巡检5台，就可以巡检500台。
-    </strong>
-  </div>
-</div>
-
----
-layout: section
----
-
-<h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>第二部分：Web应用架构</span>
-</h1>
-
-<div text-xl opacity-60 mt-4>前端、后端、数据库 —— 用你熟悉的系统来理解</div>
 
 ---
 layout: two-cols-header
 ---
 
-<h1 flex items-center gap-3 mb-4>
-  <span text-3xl>🏗️</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>Web应用全景图</span>
-</h1>
+# Web应用架构
+前端、后端、数据库 
+
 
 ::left::
 
@@ -595,10 +333,7 @@ layout: two-cols-header
 layout: two-cols
 ---
 
-<h1 flex items-center gap-3>
-  <span text-3xl>🖥️</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>前端是什么？</span>
-</h1>
+# 前端是什么？
 
 <div mt-6 />
 
@@ -652,10 +387,7 @@ layout: two-cols
 layout: two-cols-header
 ---
 
-<h1 flex items-center gap-3 mb-4>
-  <span text-3xl>🗄️</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>数据库是什么？</span>
-</h1>
+# 数据库是什么？
 
 ::left::
 
@@ -676,72 +408,19 @@ layout: two-cols-header
 | 结构化存储 | 可分析趋势 |
 
 ::right::
-
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4>
-  <div text-center text-lg font-bold mb-2>
-    <span text-green-400>设备巡检记录表（数据库中的一张表）</span>
-  </div>
-
-```
-┌────┬──────────┬────────────┬──────┐
-│ ID │ 设备名称  │ 巡检日期    │ 状态 │
-├────┼──────────┼────────────┼──────┤
-│ 1  │ 冲压机A3 │ 2026-06-01 │ 正常 │
-│ 2  │ 冲压机A3 │ 2026-06-02 │ 关注 │
-│ 3  │ 注塑机B1 │ 2026-06-01 │ 正常 │
-└────┴──────────┴────────────┴──────┘
-```
+<div text-base font-bold mb-3>数据库的本质：</div>
+<div text-sm opacity-75>
+  数据库就是一个<strong text-green-300>结构化的表格</strong>，<br/>
+  你可以把数据存进去，也可以从里面查出来。<br/>
+  <strong text-green-300>数据库 = 表格 + 查询功能</strong>
 </div>
 
-<div mt-4 text-center text-base opacity-75>
-  数据库 = 有组织的数据仓库<br/>
-  <strong text-green-300>≈ SCADA历史归档</strong>
-</div>
-
----
-layout: section
----
-
-<h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>第三部分：Claude Code & Vibe Coding</span>
-</h1>
-
-<div text-xl opacity-60 mt-4>你的AI编程搭档，和全新的编程方式</div>
-
----
-layout: center
----
-
-<h1 text-3xl font-bold text-center mb-6>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>一个重要的思维转变</span>
-</h1>
-
-<div flex justify-center gap-8 mt-8>
-  <div border="~ red-400/30" bg="red-400/5" rounded-2xl p-6 flex-1>
-    <div text-2xl mb-3 text-center>❌ 传统学编程</div>
-    <div text-sm opacity-75>
-      学语法 → 记API → 看教程 →<br/>
-      写代码 → 出bug → 搜索 →<br/>
-      改代码 → 又出bug → 再搜 →<br/>
-      <strong>一个功能搞一天，数月才能上手</strong>
-    </div>
-  </div>
-
-  <div border="~ green-400/30" bg="green-400/5" rounded-2xl p-6 flex-1>
-    <div text-2xl mb-3 text-center>✅ AI Vibe Coding</div>
-    <div text-sm opacity-75>
-      描述需求 → Claude写代码 →<br/>
-      你运行测试 → 不满意就改 →<br/>
-      满意继续 →<br/>
-      <strong>一个功能十分钟，今天就能开始</strong>
-    </div>
-  </div>
-</div>
-
-<div text-center mt-8 text-lg>
-  <strong text-green-300>你最大的价值不是写代码，而是你最懂业务需要什么。</strong>
-</div>
-
+<div>数据库类型：</div>
+<ul>
+  <li>关系型数据库：MySQL、PostgreSQL、Oracle</li>
+  <li>非关系型数据库：MongoDB、Redis</li>
+  <li>云数据库：`Supabase`、Firebase</li> 
+</ul>
 ---
 layout: two-cols-header
 ---
@@ -793,7 +472,10 @@ layout: two-cols-header
 layout: two-cols
 ---
 
-# <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>Vibe Coding</span>
+<h1 flex items-center gap-3>
+  <span text-3xl>🎵</span>
+  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>Vibe Coding</span>
+</h1>
 <div text-xl opacity-60>用说话的方式编程</div>
 
 <div mt-6 />
@@ -875,7 +557,7 @@ layout: two-cols
         <li><strong>健康度</strong> — 关系评分 + 改善建议</li>
       </ol>
     </div>
-    <div border="~ green-400/20" bg="green-400/5" rounded-xl p2>
+    <div border="~ green-400/20" bg="green-400/5" rounded-xl p-2>
       <div text-base font-bold text-green-400>👥 应用对象 <span pl-4 text-sm text-gray> 72人</span></div>
       <table w-full text-xs>
         <thead>
@@ -1037,125 +719,69 @@ layout: section
 ---
 
 <h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>第四部分：动手实战</span>
+  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 5：动手实战</span>
 </h1>
 
-<div text-xl opacity-60 mt-4>从零到上线，打造设备巡检管理系统</div>
-
----
-
-# 开发环境准备
-
-* 公司电脑
-  * 不建议直接在windows系统里安装，软件安装和配置后续都需要管理员密码，非常麻烦
-  * 安装Vmware虚拟机软件 （2929IT热线输入管理员密码）
-  * 虚拟机中安装Linux操作系统【浏览器Chrome、Node开发环境、Git版本管理都已集成】
-* 个人电脑：公司电脑中文件资料交互麻烦+两个电脑切换
-* Claude Code安装及配置
-  * [官方文档](https://code.claude.com/docs/en/overview#native-install-recommended)
- `curl -fsSL https://claude.ai/install.sh | bash`
-  * 封号严重，使用CC Switch工具，可以切换到模型
-CC Switch 官方网站
-  * DeepSeek国产大模型付费 deepseek-v4-pro
-https://platform.deepseek.com/
-* 其他可选安装配置：
-  * 代码版本管理工具`Git`
-  * 代码托管平台`Github`
-  * Web应用部署平台`Netlify`
+<div text-xl opacity-60 mt-4>从零到上线，打造团队ToDo看板工具</div>
 
 
----
 
-# 公司电脑如何也能用上？
-
-1. 【Software Center】search and install `Vmware`
-![](./src/1.png)
-
-2. Download System ISO img
-    * Linux
-    * ArchLinux(Unbuntu)
-    * `Omarchy` (https://omarchy.org/)
-
-3. 在Vmware中安装linux操作系统
-
-* ![](./src/2.png)
-* ![](./src/3.png)
-* ![](./src/4.png)
-    > 选择第二步下载的ISO镜像文件
 ---
 layout: two-cols-header
 ---
 
-<h1 flex items-center gap-3 mb-4>
-  <span text-3xl>🚀</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>动手前的准备</span>
+<h1 flex items-center gap-3>
+  <span text-3xl>⚡</span>
+  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>实战感受 AI 开发应用流程</span>
 </h1>
 
 ::left::
-
-<div border="~ gray-700" rounded-xl p-5>
-  <div text-lg font-bold mb-3><span text-green-400>1. 安装 Node.js</span></div>
-  <div text-sm opacity-75>去 https://nodejs.org 下载 LTS 版本，一路下一步</div>
+<div
+  border="l-4 green-400"
+  bg="green-400/10"
+  rounded-r-lg
+  p-3
+  text-base
+>
+  <strong text-green-300>5分钟</strong> Vibe Coding 实现团队 ToDoList 看板工具
 </div>
 
-<div border="~ gray-700" rounded-xl p-5 mt-3>
-  <div text-lg font-bold mb-3><span text-green-400>2. 打开终端</span></div>
-  <div text-sm opacity-75>Windows: Win+R → cmd → 回车<br/>Mac: Launchpad → 终端</div>
+<div mt-4 border="~ gray-700" bg="gray-800/50" rounded-xl p-4>
+  <div text-sm opacity-60 mb-2>对 Claude 说：</div>
+  <div text-base>
+    "帮我生成一个待办事项Web应用：<br/>
+    1. 添加任务 &nbsp; 2. 标记完成 &nbsp; 3. 删除<br/>
+    2. 页面要简洁<br/>
+    用 HTML + CSS + JavaScript 实现"
+  </div>
 </div>
 
 ::right::
 
-<div border="~ gray-700" rounded-xl p-5 mt-6>
-  <div text-lg font-bold mb-3><span text-green-400>3. 安装 Claude Code</span></div>
+<div mt-16 />
 
-```bash
-npm install -g
-  @anthropic-ai/claude-code
-```
+<div text-lg font-bold mb-3>
+  <span text-green-400>💡 应用场景建议</span>
 </div>
 
-<div border="~ gray-700" rounded-xl p-5 mt-3>
-  <div text-lg font-bold mb-3><span text-green-400>4. 启动</span></div>
-
-```bash
-claude
-```
-  <div text-sm opacity-75 mt-2>然后就可以对话了</div>
+<div space-y-3 text-sm>
+  <div border="~ orange-400/20" bg="orange-400/5" rounded-lg p-2>
+    <div text-orange-400 font-bold text-xs>销售类</div>
+    <div text-xs opacity-70>客户跟进 · 项目看板 · 报价记录 · 客户培训</div>
+  </div>
+  <div border="~ blue-400/20" bg="blue-400/5" rounded-lg p-2>
+    <div text-blue-400 font-bold text-xs>管理类</div>
+    <div text-xs opacity-70>团队任务 · KPI追踪 · 会议纪要</div>
+  </div>
+  <div border="~ green-400/20" bg="green-400/5" rounded-lg p-2>
+    <div text-green-400 font-bold text-xs>生活类 <span text-xs opacity-50>（降低心理门槛）</span></div>
+    <div text-xs opacity-70>健身记录 · 旅行计划 · 儿童教学</div>
+  </div>
 </div>
 
----
-
-# 实战感受AI开发应用流程
-
-> 5min Vibe Coding 实现团队ToDoList看板工具
-
-帮我生成一个待办事项Web应用：
-
-功能：
-1. 添加任务
-2. 标记完成
-3. 删除
-4. 页面要简洁
-
-用HTML + CSS + JavaScript实现
-
-
-::right::
-
-### 应用场景建议
-* 销售类
-  * 客户跟进管理
-  * 项目进度看板
-  * 报价记录工具
-  * 客户培训web
-* 管理类
-  * 团队任务看板  
-  * KPI tracking工具
-  * 会议纪要整理网页
-* 生活类（降低心理门槛）
-  * 健身记录
-  * 旅行计划
-  * 鸡兔同笼儿童教学
+<div mt-4 text-center text-sm>
+  <strong text-green-300>先从一个极简Demo开始，感受AI编程的节奏</strong>
+</div>
 
 ---
 layout: default
@@ -1408,18 +1034,10 @@ layout: two-cols
 </div>
 
 ---
-layout: section
----
 
-<h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>第五部分：部署上线</span>
-</h1>
+# 部署上线
+让你的应用真正在互联网上运行
 
-<div text-xl opacity-60 mt-4>让你的应用真正在互联网上运行</div>
-
----
-layout: center
----
 
 <h1 text-3xl font-bold text-center mb-6>
   <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>什么是部署？</span>
@@ -1511,7 +1129,7 @@ layout: two-cols
 
 <h1 flex items-center gap-3>
   <span text-3xl>⚡</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>需要后端+数据库？?</span>
+  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>需要后端+数据库？</span>
 </h1>
 
 <div mt-4 />
@@ -1840,9 +1458,11 @@ layout: center
 ---
 
 <h1 text-4xl font-bold text-center>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>谢谢！开始 Vibe Coding 吧</span>
+  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>谢谢！</span>
 </h1>
 
 <div text-center mt-8 text-xl opacity-60>
   从现在开始，你就是创造者
 </div>
+
+---
