@@ -986,12 +986,8 @@ clicks: 6
 ---
 
 # 常见误区 vs 正确心态
+Vibe Coding 的门槛不是技术，而是：敢开始 + 愿意试 + 小步迭代
 
-<div mt-4 />
-
-<div text-lg text-center mb-4>
-  <span accent>Vibe Coding 的门槛不是技术，而是：敢开始 + 愿意试 + 小步迭代</span>
-</div>
 
 <div space-y-2 text-sm mt-6>
   <div v-click flex items-center gap-2>
@@ -1030,7 +1026,7 @@ clicks: 6
 layout: default
 clicks: 3
 ---
-
+  
 # 30 秒理解 Web 全貌
 
 <div grid grid-cols-2 gap-6 mt-4>
