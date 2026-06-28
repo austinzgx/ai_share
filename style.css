@@ -1,6 +1,26 @@
 /* Reduce default slide padding */
 .slidev-layout {
-  padding: 1rem 2rem !important;
+  padding: 2rem !important;
 }
 
+/* Unified h1 gradient styling for all # headings */
+h1 {
+  background-image: linear-gradient(to right, #4ade80, #2dd4bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
 
+/* Summary / subtitle text directly after # headings */
+h1 + p {
+  font-size: 1.25rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+h1 + p + p {
+  font-size: 1rem;
+  opacity: 0.45;
+  margin-top: 0.25rem;
+}
