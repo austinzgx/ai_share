@@ -80,6 +80,72 @@ layout: default
 clicks: 3
 ---
 
+# Token —— AI 的「电表」
+
+<div mt-4 />
+
+<div grid grid-cols-2 gap-6>
+
+<div>
+  <div text-lg font-bold text-green-400 mb-3>⚡ 什么是 Token？</div>
+
+  <div border="~ green-400/20" bg="green-400/5" rounded-xl p-4 mb-4>
+    <div text-base>
+      Token 是 AI 处理文本的<strong text-green-300>最小计量单位</strong><br/>
+      可以理解为 AI 的<strong>「电表度数」</strong>——每问一次问题、每生成一段回答，都消耗一定数量的 Token
+    </div>
+  </div>
+
+  <div v-click space-y-2>
+    <div border="~ gray-700" rounded-lg p-2>
+      <div text-orange-400 text-xs font-bold>🔢 大概怎么算？</div>
+      <div text-xs opacity-70>
+        一个中文字 ≈ <strong>1-2 个 Token</strong><br/>
+        一段 500 字的回答 ≈ <strong>500-1000 Token</strong><br/>
+        一份 10 页 PDF ≈ <strong>5000-10000 Token</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div text-lg font-bold text-blue-400 mb-3>💰 要花多少钱？</div>
+
+  <div v-click space-y-3>
+    <div border="~ blue-400/20" bg="blue-400/5" rounded-xl p-3>
+      <div text-sm font-bold text-blue-300>DeepSeek v4 参考价格</div>
+      <div text-xs opacity-70>
+        输入：约 <strong>2 元 / 百万 Token</strong><br/>
+        输出：约 <strong>8 元 / 百万 Token</strong>
+      </div>
+    </div>
+
+    <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-3>
+      <div text-sm font-bold text-blue-300>🏭 实际花费估算</div>
+      <div text-xs opacity-70>
+        一次复杂对话（写代码+调试）：<strong>几分钱</strong><br/>
+        个人月度正常使用：<strong>几十元</strong> 足够<br/>
+        比一本技术书还便宜，但效率高 10 倍
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div v-click mt-4 text-center>
+  <div border="~ teal-400/30" bg="teal-400/5" rounded-xl p-3 inline-block>
+    <div text-sm>
+      💡 <strong text-teal-300>核心认知</strong>：Token 不是成本，是投资。用几毛钱的电费，省几个小时的时间。
+    </div>
+  </div>
+</div>
+
+---
+layout: default
+clicks: 3
+---
+
 # 大模型 + Agent
 
 <div mt-4 />
@@ -122,6 +188,69 @@ clicks: 3
       <span text-teal-300 font-bold>从「问答机器「</span>
       <span mx-2 opacity-50>→</span>
       <span text-green-300 font-bold>到「能动手做事的AI同事「</span>
+    </div>
+  </div>
+</div>
+
+---
+layout: default
+clicks: 3
+---
+
+# RAG —— 让 AI 读懂你的文档
+
+<div mt-4 />
+
+<div grid grid-cols-2 gap-6>
+
+<div>
+  <div text-lg font-bold text-orange-400 mb-3>❓ 没有 RAG 的痛点</div>
+
+  <div border="~ red-400/20" bg="red-400/5" rounded-xl p-4 mb-4>
+    <div text-sm opacity-80>
+      LLM 的知识<strong>截止于训练数据</strong>，它不知道：<br/>
+      • 你们公司的<strong>设备操作手册</strong>写了什么<br/>
+      • 上周三的<strong>故障记录</strong>怎么处理的<br/>
+      • 最新的<strong>安全规范</strong>更新了哪些条款
+    </div>
+  </div>
+
+  <div v-click>
+    <div text-lg font-bold text-green-400 mb-2>✅ RAG 的解法</div>
+    <div border="~ green-400/20" bg="green-400/5" rounded-xl p-4>
+      <div text-sm opacity-80>
+        <strong text-green-300>RAG = 检索增强生成</strong><br/>
+        先把你的文档<strong>上传</strong> → AI <strong>索引</strong>并理解 → 你提问时，AI <strong>先检索</strong>你的文档，<strong>再结合</strong>文档内容生成回答
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div text-lg font-bold text-blue-400 mb-3>🏭 工业场景应用</div>
+
+  <div v-click space-y-2>
+    <div border="~ blue-400/20" bg="blue-400/5" rounded-lg p-3>
+      <div text-sm font-bold>📖 设备手册问答</div>
+      <div text-xs opacity-70>「ATV630 变频器报 F011 是什么故障？怎么处理？」→ AI 直接查手册给出答案</div>
+    </div>
+    <div border="~ blue-400/20" bg="blue-400/5" rounded-lg p-3>
+      <div text-sm font-bold>📋 操作规程查询</div>
+      <div text-xs opacity-70>「高压柜停电操作的正确步骤是什么？」→ AI 对照 SOP 逐条回答</div>
+    </div>
+    <div border="~ blue-400/20" bg="blue-400/5" rounded-lg p-3>
+      <div text-sm font-bold>📝 故障案例库</div>
+      <div text-xs opacity-70>「过去一年同类设备出过几次类似问题？怎么修的？」→ AI 从历史记录中总结</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div v-click mt-4 text-center>
+  <div border="~ teal-400/30" bg="teal-400/5" rounded-xl p-3 inline-block>
+    <div text-sm>
+      💡 <strong text-teal-300>本质</strong>：给 AI 装上你的「企业硬盘」——从此它不是用通用知识回答，而是<strong>用你的资料回答</strong>
     </div>
   </div>
 </div>
