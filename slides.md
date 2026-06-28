@@ -24,7 +24,7 @@ layout: section
 ---
 
 <h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 1：基础AI知识</span>
+  <span gradient-title>Part 1：基础AI知识</span>
 </h1>
 
 <div text-xl opacity-60 mt-4>从零理解大模型与智能代理</div>
@@ -68,7 +68,7 @@ clicks: 4
 
   <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-3>
     <div text-sm font-bold text-blue-300>但它不是万能的</div>
-    <div text-xs opacity-70>它不能直接操作设备、不能读取实时数据<br/>需要<strong>"工具"</strong>来连接数字世界和物理世界</div>
+    <div text-xs opacity-70>它不能直接操作设备、不能读取实时数据<br/>需要<strong>「工具「</strong>来连接数字世界和物理世界</div>
   </div>
 </div>
 </div>
@@ -83,13 +83,13 @@ clicks: 3
 # 大模型 + Agent
 
 <div mt-4 />
-<div text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400 mb-4>
+<div text-lg font-bold gradient-title mb-4>
   LLM + (Tool Use / Function Calling)
 </div>
 
 <div border="~ green-400/20" bg="green-400/5" rounded-xl p-5 mb-4>
   <div text-base>
-    它标志着 AI 模型从单纯的<strong>"文本生成器"</strong>进化为能够与其环境交互的<strong text-green-300>"智能代理"（Agent）</strong>。
+    它标志着 AI 模型从单纯的<strong>「文本生成器「</strong>进化为能够与其环境交互的<strong text-green-300>「智能代理「（Agent）</strong>。
   </div>
 </div>
 
@@ -119,9 +119,9 @@ clicks: 3
 <div v-click mt-4 text-center>
   <div border="~ teal-400/30" bg="teal-400/5" rounded-xl p-3 inline-block>
     <div text-sm>
-      <span text-teal-300 font-bold>从"问答机器"</span>
+      <span text-teal-300 font-bold>从「问答机器「</span>
       <span mx-2 opacity-50>→</span>
-      <span text-green-300 font-bold>到"能动手做事的AI同事"</span>
+      <span text-green-300 font-bold>到「能动手做事的AI同事「</span>
     </div>
   </div>
 </div>
@@ -164,7 +164,7 @@ clicks: 4
   <div space-y-2>
     <div border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
       <div text-sm font-bold>🎯 需要你来把关</div>
-      <div text-xs opacity-70>AI 可能犯错或"幻觉"，业务判断必须由人来做</div>
+      <div text-xs opacity-70>AI 可能犯错或「幻觉「，业务判断必须由人来做</div>
     </div>
     <div border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
       <div text-sm font-bold>🔒 不能替代权限决策</div>
@@ -188,7 +188,7 @@ layout: section
 ---
 
 <h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 2：安装使用Claude Code</span>
+  <span gradient-title>Part 2：安装使用Claude Code</span>
 </h1>
 
 <div text-xl opacity-60 mt-4>从安装到上手，一步步带你入门</div>
@@ -313,11 +313,11 @@ clicks: 5
     <div text-xs opacity-70><strong>扫描整个代码库</strong>，对项目结构、文件依赖和业务逻辑有全局理解</div>
   </div>
   <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4>
-    <div text-blue-300 font-bold text-sm mb-1>💬 "给出建议"</div>
+    <div text-blue-300 font-bold text-sm mb-1>💬 「给出建议「</div>
     <div text-xs opacity-70>告诉你应该怎么改，但你得自己动手</div>
   </div>
   <div v-click border="~ green-400/20" bg="green-400/5" rounded-xl p-4>
-    <div text-green-300 font-bold text-sm mb-1>⚡ "直接做事"</div>
+    <div text-green-300 font-bold text-sm mb-1>⚡ 「直接做事「</div>
     <div text-xs opacity-70>自主搜索、修改代码、运行命令、查看结果——<strong>像一个真实的开发者</strong></div>
   </div>
 </div>
@@ -339,7 +339,7 @@ clicks: 5
 
 <div mt-3 />
 
-<div text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400 mb-4>
+<div text-lg font-bold gradient-title mb-4>
   三大基石：Clear · Direct · Specific
 </div>
 
@@ -369,10 +369,10 @@ clicks: 5
   <div text-sm font-bold text-green-400 mb-2>🏭 好的 vs 坏的 Prompt 示例：</div>
   <div grid grid-cols-2 gap-3>
     <div border="l-4 red-400" bg="red-400/5" rounded-r-lg p-3>
-      <div text-xs text-red-300>❌ "帮我做设备管理系统"</div>
+      <div text-xs text-red-300>❌ 「帮我做设备管理系统「</div>
     </div>
     <div border="l-4 green-400" bg="green-400/5" rounded-r-lg p-3>
-      <div text-xs text-green-300>✅ "做一个设备巡检记录页面，包含设备名称（下拉选择）、巡检日期、温度、压力、状态、巡检人字段，提交后保存并在列表显示"</div>
+      <div text-xs text-green-300>✅ 「做一个设备巡检记录页面，包含设备名称（下拉选择）、巡检日期、温度、压力、状态、巡检人字段，提交后保存并在列表显示「</div>
     </div>
   </div>
 </div>
@@ -382,17 +382,17 @@ layout: default
 clicks: 4
 ---
 
-# Skills —— Claude 的"插件系统"
+# Skills —— Claude 的「插件系统「
 
 <div mt-3 />
 
 <div border="~ green-400/20" bg="green-400/5" rounded-xl p-4 mb-4>
   <div text-sm>
-    <strong>Skills</strong> 是 Claude 生态的<strong text-green-300>复用性</strong>解决方案。如果你教会了 Claude "如何撰写符合公司规范的周报"，由于对话上下文会重置，下次还得重教一遍。Skills 允许你将这套指令（Prompt + 资料 + 示例）<strong text-green-300>打包成一个"技能包"</strong>，随时挂载。
+    <strong>Skills</strong> 是 Claude 生态的<strong text-green-300>复用性</strong>解决方案。如果你教会了 Claude 「如何撰写符合公司规范的周报「，由于对话上下文会重置，下次还得重教一遍。Skills 允许你将这套指令（Prompt + 资料 + 示例）<strong text-green-300>打包成一个「技能包「</strong>，随时挂载。
   </div>
 </div>
 
-<div text-lg font-bold text-green-400 mb-3>这相当于给 Claude 安装了"插件"，让它秒变专家：</div>
+<div text-lg font-bold text-green-400 mb-3>这相当于给 Claude 安装了「插件「，让它秒变专家：</div>
 
 <div grid grid-cols-3 gap-3>
   <div v-click border="~ orange-400/20" bg="orange-400/5" rounded-xl p-4 text-center>
@@ -415,7 +415,7 @@ clicks: 4
 <div v-click mt-5>
   <div border="~ teal-400/20" bg="teal-400/5" rounded-xl p-4 text-center>
     <div text-sm>
-      💡 <strong text-teal-300>你也能创建自己的 Skill</strong> —— 把"设备巡检报告模板"、"周报格式"、"客户会议纪要结构"打包成技能包，一次创建，永久复用
+      💡 <strong text-teal-300>你也能创建自己的 Skill</strong> —— 把「设备巡检报告模板「、「周报格式「、「客户会议纪要结构「打包成技能包，一次创建，永久复用
     </div>
   </div>
 </div>
@@ -425,7 +425,7 @@ layout: section
 ---
 
 <h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 3：AI 常用提效工具</span>
+  <span gradient-title>Part 3：AI 常用提效工具</span>
 </h1>
 
 <div text-xl opacity-60 mt-4>不只是编程——AI 在办公场景的全面应用</div>
@@ -489,7 +489,7 @@ clicks: 4
       <div text-sm>😫 复杂公式记不住，每次都得百度</div>
     </div>
     <div v-click border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
-      <div text-sm>😫 多人协作版本混乱，"最终版_v3_final.xlsx"</div>
+      <div text-sm>😫 多人协作版本混乱，「最终版_v3_final.xlsx「</div>
     </div>
     <div v-click border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
       <div text-sm>😫 数据量大了就卡顿、崩溃</div>
@@ -504,15 +504,15 @@ clicks: 4
   <div text-lg font-bold text-teal-400 mb-3>🤖 AI 时代的解决方案</div>
   <div space-y-2>
     <div border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
-      <div text-sm>✨ "本月的异常记录按设备分类汇总"</div>
+      <div text-sm>✨ 「本月的异常记录按设备分类汇总「</div>
       <div text-xs opacity-60>→ AI 自动写 SQL/公式，秒出结果</div>
     </div>
     <div border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
-      <div text-sm>✨ "把这三张表合并，去重后导出"</div>
+      <div text-sm>✨ 「把这三张表合并，去重后导出「</div>
       <div text-xs opacity-60>→ AI 生成处理脚本，一键完成</div>
     </div>
     <div border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
-      <div text-sm>✨ "帮我分析这组数据的趋势和异常点"</div>
+      <div text-sm>✨ 「帮我分析这组数据的趋势和异常点「</div>
       <div text-xs opacity-60>→ AI 直接给出结论 + 可视化图表</div>
     </div>
   </div>
@@ -523,7 +523,7 @@ clicks: 4
 <div mt-4 text-center>
   <div border="~ green-400/30" bg="green-400/5" rounded-xl p-3 inline-block>
     <div text-sm>
-      <strong text-green-300>从"操作工"到"指挥官"</strong> —— 你只管描述你想要什么结果，AI 帮你操作数据
+      <strong text-green-300>从「操作工「到「指挥官「</strong> —— 你只管描述你想要什么结果，AI 帮你操作数据
     </div>
   </div>
 </div>
@@ -545,10 +545,10 @@ clicks: 3
   <div text-3xl mb-3>📧</div>
   <div text-orange-300 font-bold text-sm mb-2>邮件与沟通</div>
   <ul text-xs text-left space-y-1 opacity-75>
-    <li>• "帮我把这封英文邮件翻译并回复"</li>
-    <li>• "从这串邮件中提取待办事项"</li>
-    <li>• "根据这个客户对话写跟进纪要"</li>
-    <li>• "生成本周工作周报发给团队"</li>
+    <li>• 「帮我把这封英文邮件翻译并回复「</li>
+    <li>• 「从这串邮件中提取待办事项「</li>
+    <li>• 「根据这个客户对话写跟进纪要「</li>
+    <li>• 「生成本周工作周报发给团队「</li>
   </ul>
 </div>
 
@@ -556,10 +556,10 @@ clicks: 3
   <div text-3xl mb-3>🔍</div>
   <div text-blue-300 font-bold text-sm mb-2>信息检索</div>
   <ul text-xs text-left space-y-1 opacity-75>
-    <li>• "搜索2025年所有关于XX的邮件"</li>
-    <li>• "查一下这个设备的故障历史记录"</li>
-    <li>• "对比三家供应商的报价方案"</li>
-    <li>• "找一下这个行业的最新标准文档"</li>
+    <li>• 「搜索2025年所有关于XX的邮件「</li>
+    <li>• 「查一下这个设备的故障历史记录「</li>
+    <li>• 「对比三家供应商的报价方案「</li>
+    <li>• 「找一下这个行业的最新标准文档「</li>
   </ul>
 </div>
 
@@ -567,10 +567,10 @@ clicks: 3
   <div text-3xl mb-3>⚙️</div>
   <div text-green-300 font-bold text-sm mb-2>流程自动化</div>
   <ul text-xs text-left space-y-1 opacity-75>
-    <li>• "每周五自动生成巡检数据汇总"</li>
-    <li>• "新数据录入后自动发通知给负责人"</li>
-    <li>• "异常数据自动标记并截屏保存"</li>
-    <li>• "库存低于阈值自动发邮件提醒"</li>
+    <li>• 「每周五自动生成巡检数据汇总「</li>
+    <li>• 「新数据录入后自动发通知给负责人「</li>
+    <li>• 「异常数据自动标记并截屏保存「</li>
+    <li>• 「库存低于阈值自动发邮件提醒「</li>
   </ul>
 </div>
 
@@ -589,7 +589,7 @@ layout: section
 ---
 
 <h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 4：Vibe Coding</span>
+  <span gradient-title>Part 4：Vibe Coding</span>
 </h1>
 
 <div text-xl opacity-60 mt-4>你的AI编程搭档，和全新的编程方式</div>
@@ -607,7 +607,7 @@ layout: default
     <div text-green-400 font-bold text-lg mb-2>🎯 今天的目标</div>
     <ul text-sm space-y-1 opacity-80>
       <li>✅ 每个人在自己电脑跑起一个 Web 应用，并可部署到互联网</li>
-      <li>✅ 知道怎么用 AI 一步步"对话开发"</li>
+      <li>✅ 知道怎么用 AI 一步步「对话开发「</li>
       <li>✅ 敢于把业务需求转化成工具尝试</li>
     </ul>
   </div>
@@ -628,7 +628,7 @@ layout: center
 ---
 
 <h1 text-3xl font-bold text-center mb-6>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>一个重要的思维转变</span>
+  <span gradient-title>一个重要的思维转变</span>
 </h1>
 
 <div flex justify-center gap-8 mt-8>
@@ -665,7 +665,7 @@ clicks: 6
 # 关于 AI 的核心认知
 
 <div text-lg text-center mb-4>
-  <span text-green-300 font-bold>你已经是"创造者"</span>
+  <span text-green-300 font-bold>你已经是「创造者「</span>
   <span text-sm opacity-60> —— Vibe Coding 的门槛不是技术，而是：<strong text-green-300>敢开始 + 愿意试 + 小步迭代</strong></span>
 </div>
 
@@ -816,9 +816,9 @@ clicks: 3
     </div>
     <div text-base opacity-80>
       你只需要描述需求：<br/>
-      "我要一个表单，含设备名称、<br/>
+      我要一个表单，含设备名称、<br/>
       温度、状态三个字段，<br/>
-      提交按钮是绿色的"
+      提交按钮是绿色的
     </div>
     <div mt-3 text-base>
       <strong text-green-300>
@@ -891,34 +891,34 @@ clicks: 6
 
 <div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>📝 帮你写代码</div>
-  <div text-sm opacity-75>"帮我做一个设备巡检记录页面"</div>
+  <div text-sm opacity-75>「帮我做一个设备巡检记录页面「</div>
 </div>
 
 <div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>🐛 帮你修bug</div>
-  <div text-sm opacity-75>"点击保存按钮没反应，帮我看看"</div>
+  <div text-sm opacity-75>「点击保存按钮没反应，帮我看看「</div>
 </div>
 
 <div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>➕ 帮你加功能</div>
-  <div text-sm opacity-75>"增加一个导出Excel的功能"</div>
+  <div text-sm opacity-75>「增加一个导出Excel的功能「</div>
 </div>
 
 ::right::
 
 <div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>🔍 帮你读代码</div>
-  <div text-sm opacity-75>"解释一下这段代码做了什么"</div>
+  <div text-sm opacity-75>「解释一下这段代码做了什么「</div>
 </div>
 
 <div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>🎨 帮你调样式</div>
-  <div text-sm opacity-75>"把按钮改成施耐德绿色"</div>
+  <div text-sm opacity-75>「把按钮改成施耐德绿色「</div>
 </div>
 
 <div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>🚀 帮你部署</div>
-  <div text-sm opacity-75>"帮我把这个应用部署到Netlify"</div>
+  <div text-sm opacity-75>「帮我把这个应用部署到Netlify「</div>
 </div>
 
 <div text-center mt-6 text-base>
@@ -983,26 +983,26 @@ clicks: 4
   <div text-lg font-bold text-red-400 mb-3>❌ 太模糊 —— Claude 只能瞎猜</div>
   <div space-y-3>
     <div v-click border="l-4 red-400" bg="red-400/5" rounded-r-xl p-4>
-      <div text-sm text-red-300>"做一个设备管理系统"</div>
+      <div text-sm text-red-300>「做一个设备管理系统「</div>
       <div text-xs opacity-50 mt-1>什么设备？哪些功能？谁用？数据存哪里？</div>
     </div>
     <div v-click border="l-4 red-400" bg="red-400/5" rounded-r-xl p-4>
-      <div text-sm text-red-300>"帮我写个报表功能"</div>
+      <div text-sm text-red-300>「帮我写个报表功能「</div>
       <div text-xs opacity-50 mt-1>什么数据？什么格式？按什么维度汇总？</div>
     </div>
     <div v-click border="l-4 red-400" bg="red-400/5" rounded-r-xl p-4>
-      <div text-sm text-red-300>"弄个数据看板"</div>
+      <div text-sm text-red-300>「弄个数据看板「</div>
       <div text-xs opacity-50 mt-1>哪些指标？实时还是汇总？给谁看？</div>
     </div>
   </div>
 </div>
 
 <div>
-  <div text-lg font-bold text-green-400 mb-3>✅ 具体清晰 —— Claude "看见"了</div>
+  <div text-lg font-bold text-green-400 mb-3>✅ 具体清晰 —— Claude 「看见「了</div>
   <div space-y-3>
     <div v-click border="l-4 green-400" bg="green-400/5" rounded-r-xl p-4>
       <div text-sm text-green-300 leading-relaxed>
-        "做一个<strong>设备巡检记录页面</strong>，有表单和列表两部分。表单包含<strong>设备名称（下拉选择）、巡检日期、温度读数(°C)、压力读数(bar)、运行状态（正常/关注/异常）、巡检人、备注</strong>。提交后保存到列表，列表按<strong>日期倒序</strong>显示，支持<strong>按设备名称搜索</strong>。"
+        「做一个<strong>设备巡检记录页面</strong>，有表单和列表两部分。表单包含<strong>设备名称（下拉选择）、巡检日期、温度读数(°C)、压力读数(bar)、运行状态（正常/关注/异常）、巡检人、备注</strong>。提交后保存到列表，列表按<strong>日期倒序</strong>显示，支持<strong>按设备名称搜索</strong>。「
       </div>
       <div text-xs opacity-50 mt-1>做什么 ✓ 有什么字段 ✓ 要怎么交互 ✓</div>
     </div>
@@ -1043,9 +1043,9 @@ layout: default
 >
   <div text-sm opacity-50 mb-2>✅ 标准模板：</div>
   <div text-sm leading-relaxed>
-    "我要做一个<strong text-green-300>【设备巡检记录表】</strong>（做什么），<br/>
+    我要做一个<strong text-green-300>【设备巡检记录表】</strong>（做什么），<br/>
     包含<strong text-green-300>【设备名称、巡检日期、温度、压力、状态、巡检人】</strong>字段（有什么），<br/>
-    提交后<strong text-green-300>【数据保存并显示在列表里，异常记录用红色标出来】</strong>（要怎么交互）。"
+    提交后<strong text-green-300>【数据保存并显示在列表里，异常记录用红色标出来】</strong>（要怎么交互）。
   </div>
 </div>
 
@@ -1165,7 +1165,7 @@ clicks: 5
 ---
 
 <h1 text-3xl font-bold text-center mb-6>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Vibe Coding 工作流程</span>
+  <span gradient-title>Vibe Coding 工作流程</span>
 </h1>
 
 <div
@@ -1209,10 +1209,10 @@ layout: section
 ---
 
 <h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 5：动手实战</span>
+  <span gradient-title>Part 5：动手实战</span>
 </h1>
 
-<div text-xl opacity-60 mt-4>从零到上线，打造团队 ToDo 看板工具</div>
+<div text-xl opacity-60 mt-4>从零到上线，打造团队任务看板工具</div>
 
 ---
 layout: two-cols-header
@@ -1220,7 +1220,7 @@ layout: two-cols-header
 
 <h1 flex items-center gap-3>
   <span text-3xl>⚡</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>实战感受 AI 开发应用流程</span>
+  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>快速热身：5分钟感受 Vibe Coding</span>
 </h1>
 
 ::left::
@@ -1231,21 +1231,21 @@ layout: two-cols-header
   p-4
   text-base
 >
-  <strong text-green-300>⏱️ 5分钟</strong> Vibe Coding 实现团队 ToDoList 看板工具
+  <strong text-green-300>⏱️ 5分钟</strong> 先做一个极简 Demo，感受 AI 编程的节奏
 </div>
 
 <div mt-4 border="~ gray-700" bg="gray-800/50" rounded-xl p-5>
   <div text-sm opacity-60 mb-2>对 Claude 说：</div>
   <div text-sm leading-relaxed>
-    "帮我生成一个待办事项Web应用：<br/>
-    1. 添加任务 &nbsp; 2. 标记完成 &nbsp; 3. 删除<br/>
-    4. 页面要简洁<br/>
-    用 HTML + CSS + JavaScript 实现"
+    帮我做一个待办事项管理页面：<br/>
+    1. 可以添加任务、标记完成、删除<br/>
+    2. 页面简洁清爽<br/>
+    用 HTML + CSS + JavaScript 实现
   </div>
 </div>
 
 <div mt-4 text-center text-sm>
-  <strong text-green-300>这就是你的第一个 Vibe Coding 对话。从这段话开始，你已经在编程了。</strong>
+  <strong text-green-300>先跑起来，感受节奏。下一步我们做真正的团队看板。</strong>
 </div>
 
 ::right::
@@ -1253,26 +1253,22 @@ layout: two-cols-header
 <div mt-8 />
 
 <div text-lg font-bold mb-3>
-  <span text-green-400>💡 应用场景建议</span>
+  <span text-green-400>💡 应用场景发散</span>
 </div>
 
 <div space-y-3 text-sm>
   <div border="~ orange-400/20" bg="orange-400/5" rounded-lg p-3>
     <div text-orange-400 font-bold text-xs mb-1>销售类</div>
-    <div text-xs opacity-70>客户跟进 · 项目看板 · 报价记录 · 客户培训管理</div>
+    <div text-xs opacity-70>客户跟进看板 · 项目推进 · 报价追踪</div>
   </div>
   <div border="~ blue-400/20" bg="blue-400/5" rounded-lg p-3>
     <div text-blue-400 font-bold text-xs mb-1>管理类</div>
-    <div text-xs opacity-70>团队任务 · KPI追踪 · 会议纪要 · 项目周报</div>
+    <div text-xs opacity-70>团队任务 · KPI追踪 · 会议纪要 · 周报汇总</div>
   </div>
   <div border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
-    <div text-green-400 font-bold text-xs mb-1>生活类 <span text-xs opacity-50>（降低心理门槛）</span></div>
-    <div text-xs opacity-70>健身记录 · 旅行计划 · 学习打卡 · 家庭账单</div>
+    <div text-green-400 font-bold text-xs mb-1>产线类 <span text-xs opacity-50>（你最熟悉）</span></div>
+    <div text-xs opacity-70>设备巡检 · 保养计划 · 备件管理 · 交接班</div>
   </div>
-</div>
-
-<div mt-4 text-center text-sm>
-  <strong text-green-300>先从一个极简 Demo 开始，感受 AI 编程的节奏</strong>
 </div>
 
 ---
@@ -1281,53 +1277,46 @@ layout: default
 
 <h1 flex items-center gap-3>
   <span text-3xl>🏭</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>实战目标：设备巡检管理系统</span>
+  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>实战目标：团队任务看板</span>
 </h1>
 
 <div mt-4 />
 
-<div
-  border="~ green-400/30"
-  bg="green-400/5"
-  rounded-2xl
-  p-5
-  text-lg
-  text-center
-  mb-6
->
-  <strong>目标：</strong>在手机上也能用的设备巡检记录系统
+<div border="~ green-400/30" bg="green-400/5" rounded-2xl p-5 text-lg text-center mb-6>
+  <strong>目标：</strong>一个团队内部的任务看板工具 —— 每个人知道自己要做什么、做到哪了<br/>
+  Leader 一眼看到全局进展，有问题直接给评论
 </div>
 
 <div grid grid-cols-3 gap-4>
   <div border="~ gray-700" rounded-xl p-4 text-center>
-    <div text-3xl mb-2>📝</div>
-    <div font-bold>巡检表单</div>
-    <div text-xs opacity-60 mt-1>填写和提交巡检数据</div>
-  </div>
-  <div border="~ gray-700" rounded-xl p-4 text-center>
     <div text-3xl mb-2>📋</div>
-    <div font-bold>记录列表</div>
-    <div text-xs opacity-60 mt-1>查看所有历史记录</div>
+    <div font-bold>看板视图</div>
+    <div text-xs opacity-60 mt-1>待办 · 进行中 · 已完成<br/>三列拖拽式管理</div>
   </div>
   <div border="~ gray-700" rounded-xl p-4 text-center>
-    <div text-3xl mb-2>🔍</div>
-    <div font-bold>筛选搜索</div>
-    <div text-xs opacity-60 mt-1>按设备和日期查找</div>
+    <div text-3xl mb-2>👤</div>
+    <div font-bold>任务分配</div>
+    <div text-xs opacity-60 mt-1>每张卡片有负责人<br/>按人员筛选查看</div>
   </div>
   <div border="~ gray-700" rounded-xl p-4 text-center>
-    <div text-3xl mb-2>⚠️</div>
-    <div font-bold>异常标记</div>
-    <div text-xs opacity-60 mt-1>超标自动标红提醒</div>
+    <div text-3xl mb-2>💬</div>
+    <div font-bold>评论反馈</div>
+    <div text-xs opacity-60 mt-1>Leader 可在卡片下留言<br/>指出问题、给出建议</div>
+  </div>
+  <div border="~ gray-700" rounded-xl p-4 text-center>
+    <div text-3xl mb-2>📊</div>
+    <div font-bold>进度仪表盘</div>
+    <div text-xs opacity-60 mt-1>完成率、各人负载<br/>一目了然</div>
   </div>
   <div border="~ gray-700" rounded-xl p-4 text-center>
     <div text-3xl mb-2>📱</div>
     <div font-bold>手机适配</div>
-    <div text-xs opacity-60 mt-1>手机扫码就能用</div>
+    <div text-xs opacity-60 mt-1>手机扫码就能用<br/>随时查看和操作</div>
   </div>
   <div border="~ gray-700" rounded-xl p-4 text-center>
     <div text-3xl mb-2>🚀</div>
     <div font-bold>部署上线</div>
-    <div text-xs opacity-60 mt-1>Netlify公网访问</div>
+    <div text-xs opacity-60 mt-1>Netlify 公网访问<br/>链接分享给团队</div>
   </div>
 </div>
 
@@ -1361,11 +1350,12 @@ clicks: 4
   text-sm
 >
   <div opacity-60 mb-1>你的需求：</div>
-  "帮我创建一个设备巡检记录的Web应用，具体要求：<br/>
-  1. 一个巡检表单页面，字段包含：设备名称、巡检日期、温度读数(°C)、压力读数(bar)、运行状态（正常/关注/异常）、巡检人、备注<br/>
-  2. 提交后数据保存到数据库<br/>
-  3. 一个列表页面，按日期倒序显示所有记录<br/>
-  4. 用绿色作为主题色"
+  帮我创建一个团队任务看板Web应用，具体要求：<br/>
+  1. 看板视图，三列：待办、进行中、已完成，卡片可以拖拽移动<br/>
+  2. 每张任务卡片包含：任务标题、负责人（下拉选择）、截止日期、优先级（高/中/低）<br/>
+  3. 点击卡片可展开详情，支持添加评论<br/>
+  4. 顶部有仪表盘，显示各状态任务数、完成率、每人负载<br/>
+  5. 用绿色作为主题色
 </div>
 
 <div grid grid-cols-3 gap-3 mt-4>
@@ -1404,16 +1394,16 @@ clicks: 6
   <div text-sm opacity-75 mb-2>对 Claude 说：</div>
 
   <div border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
-    > "帮我运行起来，让我看看效果"
+    > 「帮我运行起来，让我看看效果「
   </div>
 
   <div mt-4 text-sm opacity-75>
     几分钟内就能在浏览器里看到一个能用的应用：
   </div>
   <div text-sm mt-1 space-y-1>
-    <div v-click>🟢 巡检表单页面</div>
-    <div v-click>🟢 记录列表页面</div>
-    <div v-click>🟢 施耐德绿色主题</div>
+    <div v-click>🟢 三列看板视图</div>
+    <div v-click>🟢 可拖拽任务卡片</div>
+    <div v-click>🟢 仪表盘统计面板</div>
   </div>
 </div>
 
@@ -1425,13 +1415,13 @@ clicks: 6
 
   <div space-y-2>
     <div v-click border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
-      > "表单里增加一个'巡检类型'字段"
+      > 「卡片上增加'预计工时'字段「
     </div>
     <div v-click border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
-      > "异常记录用红色背景显示"
+      > 「过期任务用红色边框标记「
     </div>
     <div v-click border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
-      > "加搜索框，按设备名称搜索"
+      > 「加搜索框，按负责人和关键词筛选「
     </div>
   </div>
 </div>
@@ -1454,33 +1444,33 @@ clicks: 5
 
 <div grid grid-cols-1 gap-2>
   <div border="~ gray-700" rounded-xl p-4>
-    <div text-sm font-bold text-green-400>🔄 第1轮：异常自动判断</div>
-    <div text-sm opacity-75 mt-1>"表单提交时，温度超过75度或压力超过3.0bar，自动标记为异常"</div>
+    <div text-sm font-bold text-green-400>💬 第1轮：评论功能</div>
+    <div text-sm opacity-75 mt-1>「点击任务卡片可以展开详情页，支持添加评论，每条评论显示时间和作者「</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
-    <div text-sm font-bold text-green-400>📊 第2轮：仪表盘概览</div>
-    <div text-sm opacity-75 mt-1>"加一个首页仪表盘，显示今日巡检总数、异常记录数、本月趋势，用卡片布局"</div>
+    <div text-sm font-bold text-green-400>📊 第2轮：Leader 仪表盘</div>
+    <div text-sm opacity-75 mt-1>「加一个首页仪表盘，显示团队任务完成率、各人负载统计、本周趋势，用卡片+图表布局「</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
-    <div text-sm font-bold text-green-400>📥 第3轮：导出Excel</div>
-    <div text-sm opacity-75 mt-1>"加导出按钮，把筛选后的巡检记录导出为Excel文件"</div>
+    <div text-sm font-bold text-green-400>🔔 第3轮：截止日期提醒</div>
+    <div text-sm opacity-75 mt-1>「任务到期当天自动标红，逾期未完成的任务在顶部显示警告横幅「</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
     <div text-sm font-bold text-green-400>📱 第4轮：手机端适配</div>
-    <div text-sm opacity-75 mt-1>"帮我把移动端的显示效果优化，按钮和字体放大"</div>
+    <div text-sm opacity-75 mt-1>「帮我把移动端显示效果优化，看板在小屏幕上也能滑动操作「</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
-    <div text-sm font-bold text-green-400>⏰ 第5轮：保养提醒</div>
-    <div text-sm opacity-75 mt-1>"加保养到期提醒：设备增加下次保养日期，到期前3天红色提醒"</div>
+    <div text-sm font-bold text-green-400>📥 第5轮：导出周报</div>
+    <div text-sm opacity-75 mt-1>「加导出按钮，把本周完成的任务和进展一键导出为Excel周报「</div>
   </div>
 </div>
 
 <div v-click text-center mt-6 text-base>
-  <strong text-green-300>每轮几分钟到十几分钟。一个下午，完整的巡检系统就出来了。</strong>
+  <strong text-green-300>每轮几分钟到十几分钟。一个下午，完整的团队看板系统就出来了。</strong>
 </div>
 
 ---
@@ -1506,10 +1496,10 @@ clicks: 3
 <div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4>
   <div text-sm font-bold text-green-400>💬 怎么跟 Claude 说：</div>
   <div text-sm mt-1>
-    > "用SQLite做数据库" <span text-xs opacity-50>（推荐起步方案，最简单）</span>
+    > 「用SQLite做数据库「 <span text-xs opacity-50>（推荐起步方案，最简单）</span>
   </div>
   <div text-sm mt-1>
-    > "改用Supabase，让多人用" <span text-xs opacity-50>（需要多人协作时迁移）</span>
+    > 「改用Supabase，让多人用「 <span text-xs opacity-50>（需要多人协作时迁移）</span>
   </div>
 </div>
 
@@ -1605,7 +1595,7 @@ clicks: 5
 <div v-click border="~ gray-700" rounded-xl p-5>
   <div text-lg font-bold mb-3 text-green-400>💬 然后对 Claude 说</div>
   <div border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
-    > "帮我把项目部署到Netlify"
+    > 「帮我把项目部署到Netlify「
   </div>
 </div>
 
@@ -1666,7 +1656,7 @@ clicks: 3
 <div v-click text-sm>
   <strong>💬 对 Claude 说：</strong>
   <div border="~ gray-600" rounded-lg p-3 bg="gray-800/50" mt-1>
-    > "帮我把应用改成用Supabase做后端和数据库"
+    > 「帮我把应用改成用Supabase做后端和数据库「
   </div>
 </div>
 
@@ -1762,7 +1752,7 @@ clicks: 3
 ---
 
 <h1 text-3xl font-bold text-center mb-6>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>你不需要成为软件工程师</span>
+  <span gradient-title>你不需要成为软件工程师</span>
 </h1>
 
 <div flex justify-center gap-6 mt-4>
@@ -1785,7 +1775,7 @@ clicks: 3
 
 <div text-center mt-6 text-lg>
   <strong text-green-300>描述需求 → 审查结果 → 提出修改 → 迭代完善。</strong><br/>
-  <span text-base opacity-60>你的角色不是"码农"，而是"做决策的人"。</span>
+  <span text-base opacity-60>你的角色不是「码农「，而是「做决策的人「。</span>
 </div>
 
 ---
@@ -1806,7 +1796,7 @@ clicks: 2
     <div>• 用你熟悉的业务语言描述</div>
     <div>• 一次只改一个功能</div>
     <div>• 生成后立刻运行测试</div>
-    <div>• 不懂就问"这段代码做了什么？"</div>
+    <div>• 不懂就问「这段代码做了什么？「</div>
     <div>• 从小功能开始，逐步复杂</div>
     <div>• 出现报错直接复制粘贴给 Claude</div>
   </div>
@@ -1819,7 +1809,7 @@ clicks: 2
 <div v-click border="l-4 red-400" bg="red-400/5" rounded-r-xl p-4>
   <div text-lg font-bold text-red-400 mb-2>❌ 不要做的</div>
   <div text-sm opacity-80 space-y-1>
-    <div>• 说"做个设备管理系统"（太笼统）</div>
+    <div>• 说「做个设备管理系统「（太笼统）</div>
     <div>• 一次提10个需求（互相干扰）</div>
     <div>• 对问题沉默不管（告诉Claude）</div>
     <div>• 不思考照单全收（你说了算）</div>
@@ -1843,7 +1833,7 @@ clicks: 5
 <div grid grid-cols-1 gap-3>
   <div border="~ gray-700" rounded-xl p-4>
     <div font-bold text-green-400>Q: 我完全没写过代码，真的可以吗？</div>
-    <div text-sm opacity-75>A: 可以。你不需要"写"代码，只需"描述需求"。就像不用会做菜才能点菜，你只管说你要什么，Claude是那个做菜的人。</div>
+    <div text-sm opacity-75>A: 可以。你不需要「写「代码，只需「描述需求「。就像不用会做菜才能点菜，你只管说你要什么，Claude是那个做菜的人。</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
@@ -1873,7 +1863,7 @@ clicks: 3
 ---
 
 <h1 text-3xl font-bold text-center mb-8>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>你的第一个任务 —— 现在就开始</span>
+  <span gradient-title>你的第一个任务 —— 现在就开始</span>
 </h1>
 
 <div
@@ -1887,11 +1877,11 @@ clicks: 3
   <div text-sm opacity-50 mb-3>🔽 打开 Claude Code，复制输入下面这段话：</div>
 
   <div border="~ gray-600" rounded-xl p-5 bg="gray-800/50" text-sm leading-relaxed>
-    "帮我做一个简单的设备运行日志Web应用：<br/>
+    帮我做一个简单的设备运行日志Web应用：<br/>
     1. 一个表单页面，字段有：设备名称、日期、班次（早班/中班/晚班）、运行时长(小时)、当日产量、异常备注<br/>
     2. 提交后数据保存在本地，显示在下面的记录列表里<br/>
     3. 列表按日期倒序显示，不同班次用不同颜色标记<br/>
-    4. 用HTML+CSS+JS做，数据存在localStorage里"
+    4. 用HTML+CSS+JS做，数据存在localStorage里
   </div>
 </div>
 
@@ -1900,7 +1890,7 @@ clicks: 3
 </div>
 
 <div v-click text-center>
-  <div border="~ teal-400/30" bg="teal-400/5" rounded-xl p-4 inline-block">
+  <div border="~ teal-400/30" bg="teal-400/5" rounded-xl p-4 inline-block>
     <div text-sm text-teal-300>
       🎯 从这段话开始，你已经在编程了。不是学编程——而是用编程解决你的实际问题。
     </div>
@@ -1965,7 +1955,7 @@ clicks: 3
 ---
 
 <h1 text-3xl font-bold text-center mb-8>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>最好的学习时机是现在</span>
+  <span gradient-title>最好的学习时机是现在</span>
 </h1>
 
 <div
@@ -1988,8 +1978,8 @@ clicks: 3
   </div>
 
   <div v-click text-base opacity-70 mt-2>
-    你今天学到的不是"怎么编程"<br/>
-    而是<strong text-green-300>"原来我也可以"</strong>
+    你今天学到的不是「怎么编程「<br/>
+    而是<strong text-green-300>「原来我也可以「</strong>
   </div>
 </div>
 
@@ -2003,7 +1993,7 @@ layout: center
 ---
 
 <h1 text-4xl font-bold text-center>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>谢谢！</span>
+  <span gradient-title>谢谢！</span>
 </h1>
 
 <div text-center mt-8 text-xl opacity-60>
