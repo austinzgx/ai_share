@@ -27,18 +27,161 @@ layout: section
   <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 1：基础AI知识</span>
 </h1>
 
-<div text-xl opacity-60 mt-4>CC使用技巧与最佳实践分享</div>
+<div text-xl opacity-60 mt-4>从零理解大模型与智能代理</div>
 
 ---
+layout: default
+clicks: 4
+---
 
-# 大模型 + Agent 
+# 什么是大语言模型（LLM）？
 
-LLM + (Tool Use / Function Calling)  
+<div grid grid-cols-2 gap-6 mt-6>
 
-它标志着 AI 模型从单纯的“文本生成器”进化为能够与其环境交互的“智能代理”（Agent）。
+<div>
+<div text-lg font-bold text-green-400 mb-3>💡 一句话理解</div>
 
-简单来说，工具使用 是指 Claude 等模型能够理解开发者定义的外部函数或 API，并在对话过程中根据用户的需求，自主判断、决策并生成调用这些工具所需的参数（通常是 JSON 格式）。
+<div border="~ green-400/20" bg="green-400/5" rounded-xl p-4 mb-4>
+  <div text-base>
+    大语言模型 = 一个<span text-green-300 font-bold>读过海量书籍、文档、代码</span>的 AI<br/>
+    它能<strong>理解</strong>你的自然语言问题，并<span text-green-300 font-bold>逐字生成</span>回答
+  </div>
+</div>
 
+<div v-click text-sm space-y-2>
+  <div border="~ gray-700" rounded-lg p-2>
+    <div text-orange-400 text-xs font-bold>📚 训练过程</div>
+    <div text-xs opacity-70>就像一个人读完了整个互联网的文章、书籍、代码，学会了语言的规律和世界的知识</div>
+  </div>
+</div>
+
+</div>
+
+<div>
+<div text-lg font-bold text-blue-400 mb-3>🏭 工业类比</div>
+
+<div v-click space-y-3>
+  <div border="~ blue-400/20" bg="blue-400/5" rounded-xl p-3>
+    <div text-sm font-bold text-blue-300>LLM ≈ 经验丰富的工程师</div>
+    <div text-xs opacity-70>读过所有设备手册、故障记录、工艺文档<br/>你问他问题，他能根据经验给出回答</div>
+  </div>
+
+  <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-3>
+    <div text-sm font-bold text-blue-300>但它不是万能的</div>
+    <div text-xs opacity-70>它不能直接操作设备、不能读取实时数据<br/>需要<strong>"工具"</strong>来连接数字世界和物理世界</div>
+  </div>
+</div>
+</div>
+
+</div>
+
+---
+layout: default
+clicks: 3
+---
+
+# 大模型 + Agent
+
+<div mt-4 />
+<div text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400 mb-4>
+  LLM + (Tool Use / Function Calling)
+</div>
+
+<div border="~ green-400/20" bg="green-400/5" rounded-xl p-5 mb-4>
+  <div text-base>
+    它标志着 AI 模型从单纯的<strong>"文本生成器"</strong>进化为能够与其环境交互的<strong text-green-300>"智能代理"（Agent）</strong>。
+  </div>
+</div>
+
+<div grid grid-cols-2 gap-4 mt-4>
+
+<div v-click>
+  <div text-sm font-bold text-orange-400 mb-2>🔧 什么是 Tool Use？</div>
+  <div border="~ orange-400/20" bg="orange-400/5" rounded-lg p-3>
+    <div text-xs opacity-80>
+      模型能够理解开发者定义的<strong>外部函数或 API</strong>，在对话中根据用户需求，<strong>自主判断、决策</strong>并生成调用这些工具所需的参数（通常是 JSON 格式）。
+    </div>
+  </div>
+</div>
+
+<div v-click>
+  <div text-sm font-bold text-green-400 mb-2>🏭 工业场景类比</div>
+  <div border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
+    <div text-xs opacity-80>
+      就像 PLC 不只是读取传感器数据——它还能<strong>驱动执行器</strong>去做事。<br/>
+      Agent 不只是回答问题——它能<strong>执行操作</strong>：查数据库、发邮件、创建文件、部署应用。
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div v-click mt-4 text-center>
+  <div border="~ teal-400/30" bg="teal-400/5" rounded-xl p-3 inline-block>
+    <div text-sm>
+      <span text-teal-300 font-bold>从"问答机器"</span>
+      <span mx-2 opacity-50>→</span>
+      <span text-green-300 font-bold>到"能动手做事的AI同事"</span>
+    </div>
+  </div>
+</div>
+
+---
+layout: default
+clicks: 4
+---
+
+# AI 的能力与边界
+
+<div mt-4 />
+
+<div grid grid-cols-2 gap-6>
+
+<div>
+  <div text-lg font-bold text-green-400 mb-3>✅ AI 擅长的事</div>
+  <div space-y-2>
+    <div v-click border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
+      <div text-sm font-bold>📝 文本理解与生成</div>
+      <div text-xs opacity-70>写报告、做总结、翻译、润色文案</div>
+    </div>
+    <div v-click border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
+      <div text-sm font-bold>💻 代码编写与调试</div>
+      <div text-xs opacity-70>生成代码、修 bug、解释代码逻辑</div>
+    </div>
+    <div v-click border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
+      <div text-sm font-bold>📊 数据分析与结构化</div>
+      <div text-xs opacity-70>从非结构化文本中提取信息、分类整理</div>
+    </div>
+    <div v-click border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
+      <div text-sm font-bold>🔍 信息检索与知识整合</div>
+      <div text-xs opacity-70>快速查找、对比、综合多源信息</div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div text-lg font-bold text-red-400 mb-3>⚠️ AI 的局限性</div>
+  <div space-y-2>
+    <div border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
+      <div text-sm font-bold>🎯 需要你来把关</div>
+      <div text-xs opacity-70>AI 可能犯错或"幻觉"，业务判断必须由人来做</div>
+    </div>
+    <div border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
+      <div text-sm font-bold>🔒 不能替代权限决策</div>
+      <div text-xs opacity-70>审批、授权、安全关键操作——必须由人确认</div>
+    </div>
+    <div border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
+      <div text-sm font-bold>🏭 不能直接操作物理设备</div>
+      <div text-xs opacity-70>AI 需要经过控制层才能影响实际生产系统</div>
+    </div>
+    <div border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
+      <div text-sm font-bold>💡 你的价值不可替代</div>
+      <div text-xs opacity-70>AI 不懂你的车间、不懂你的客户、不懂你的业务场景</div>
+    </div>
+  </div>
+</div>
+
+</div>
 
 ---
 layout: section
@@ -48,118 +191,398 @@ layout: section
   <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 2：安装使用Claude Code</span>
 </h1>
 
-<div text-xl opacity-60 mt-4>CC使用技巧与最佳实践分享</div>
+<div text-xl opacity-60 mt-4>从安装到上手，一步步带你入门</div>
 
 ---
-layout: default
+layout: two-cols-header
 ---
 
 # CC安装配置
 
-  <div border="~ green-400/20" bg="green-400/5" rounded-xl p-4>
-    <div text-xl mb-2>🖥️</div>
-    <div text-green-400 font-bold mb-2>公司电脑方案</div>
-    <ul text-xs space-y-1 opacity-75>
-      <li>安装 Vmware 虚拟机（2929IT热线 输入管理员密码）</li>
-      <li>虚拟机中安装 Linux 操作系统</li>
-      <li>已集成：Chrome、Node、Git</li>
+::left::
+
+  <div border="~ green-400/20" bg="green-400/5" rounded-xl p-5 h-full>
+    <div text-xl mb-3>🖥️</div>
+    <div text-green-400 font-bold mb-3 text-lg>公司电脑方案</div>
+    <ul text-sm space-y-2 opacity-80>
+      <li>📦 Software Center 搜索安装 <strong>Vmware</strong></li>
+      <li>🔑 提示管理员密码 → 拨打 <strong>2929 IT热线</strong></li>
+      <li>🐧 虚拟机中安装 Linux 操作系统</li>
+      <li>✅ 已集成：Chrome、Node.js、Git</li>
     </ul>
-    <div text-xs mt-2 opacity-50>不建议直接在 Windows 里安装，后续配置需管理员密码</div>
-   
+    <div text-xs mt-4 p-2 rounded bg="orange-400/10" border="~ orange-400/20">
+      ⚠️ 不建议直接在 Windows 里安装，后续配置需要管理员密码，限制较多
+    </div>
   </div>
 
+::right::
 
-  <div border="~ green-400/20" bg="green-400/5" rounded-xl p-4>
-    <div text-xl mb-2>💻</div>
-    <div text-green-400 font-bold mb-2>个人电脑方案</div>
-    <ul text-xs space-y-1 opacity-75>
-      <li>系统干净，安装配置无限制</li>
-      <li>与公司电脑切换使用</li>
-      <li>文件交互通过网盘/Git</li>
+  <div border="~ blue-400/20" bg="blue-400/5" rounded-xl p-5 h-full>
+    <div text-xl mb-3>💻</div>
+    <div text-blue-400 font-bold mb-3 text-lg>个人电脑方案</div>
+    <ul text-sm space-y-2 opacity-80>
+      <li>🆓 系统干净，安装配置无限制</li>
+      <li>🔄 与公司电脑灵活切换使用</li>
+      <li>☁️ 文件交互通过<strong>网盘 / Git</strong></li>
+      <li>⚡ 推荐 Mac / Linux，Windows 次之</li>
     </ul>
+    <div text-xs mt-4 p-2 rounded bg="green-400/10" border="~ green-400/20">
+      💡 个人电脑体验最佳，适合快速上手学习
+    </div>
   </div>
 
 ---
+layout: two-cols-header
+clicks: 4
+---
 
-# 其他配套
+# 其他配套工具
 
-  <div border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4>
-    <div text-xl mb-2>🤖</div>
-    <div text-blue-400 font-bold mb-2>Claude Code 安装</div>
-    <div text-xs opacity-75 mb-1>
-      <a href="https://code.claude.com/docs/en/overview" target="_blank">官方安装文档</a>
-    </div>
+::left::
+
+<div border="~ blue-400/20" bg="blue-400/5" rounded-xl p-5>
+  <div text-xl mb-3>🤖</div>
+  <div text-blue-400 font-bold mb-3 text-lg>Claude Code 安装</div>
 
 ```bash
+# 一条命令完成安装
 curl -fsSL https://claude.ai/install.sh | bash
 ```
+
+  <div text-xs opacity-60 mt-2>
+    <a href="https://code.claude.com/docs/en/overview" target="_blank">📖 官方安装文档</a>
+  </div>
 </div>
 
-  <div border="~ orange-400/20" bg="orange-400/5" rounded-xl p-4>
-    <div text-xl mb-2>📦</div>
-    <div text-orange-400 font-bold mb-2>可选配套工具</div>
-    <ul text-xs space-y-1 opacity-75>
-      <li><strong>Git</strong> — 代码版本管理</li>
-      <li><strong>GitHub</strong> — 代码托管平台</li>
-      <li><strong>Netlify</strong> — Web应用部署</li>
-    </ul>
+<div v-click border="~ purple-400/20" bg="purple-400/5" rounded-xl p-5 mt-3>
+  <div text-xl mb-3>🔄</div>
+  <div text-purple-400 font-bold mb-2 text-lg>CC Switch — 模型切换</div>
+  <div text-sm opacity-75>
+    支持切换底层模型（如 DeepSeek），避免单一账号封号风险<br/>
+    <div mt-2 text-xs>
+      🛒 付费注册：<a href="https://platform.deepseek.com/" target="_blank">platform.deepseek.com</a>
+    </div>
   </div>
+</div>
+
+::right::
+
+<div border="~ orange-400/20" bg="orange-400/5" rounded-xl p-5 mb-3>
+  <div text-xl mb-3>📦</div>
+  <div text-orange-400 font-bold mb-3 text-lg>可选配套工具</div>
+  <div space-y-2 text-sm>
+    <div v-click border="~ gray-600" rounded-lg p-3>
+      <div font-bold>🔧 Git — 代码版本管理</div>
+      <div text-xs opacity-60>记录每一次修改，随时回退，团队协作的基础</div>
+    </div>
+    <div v-click border="~ gray-600" rounded-lg p-3>
+      <div font-bold>🐙 GitHub — 代码托管平台</div>
+      <div text-xs opacity-60>云端存储代码，自动备份，部署的起点</div>
+    </div>
+    <div v-click border="~ gray-600" rounded-lg p-3>
+      <div font-bold>🚀 Netlify — Web应用部署</div>
+      <div text-xs opacity-60>免费一键部署，生成公网链接，手机就能访问</div>
+    </div>
+  </div>
+</div>
 
 ---
-
-# Claude Code
-
-是由 Anthropic 推出的终端原生 AI 编程助手。它直接运行在开发者电脑的命令行中，不仅能生成代码，还能自主读取整个项目、跨文件修改、运行 Shell 命令和测试，是实现人机协同开发的强大工具。
-## CLI与网页版AI有何不同
-* 上下文感知（Context-Aware）： 网页版聊天机器人只知道你粘贴给它的代码片段；而 Claude Code 会扫描你整个代码库，对项目结构、文件依赖和业务逻辑有全局理解。
-* 智能体能力（Agentic）： 它不仅仅是“给出建议”，而是能够像人类开发者一样“做事”。你可以让它修复特定的 bug，它会自主搜索错误文件、修改代码并尝试运行。
-* 原生终端操作： 无需离开终端，它就能读写文件、执行 Shell 命令、查看 Git 状态甚至安装依赖包。
-
+layout: default
+clicks: 5
 ---
 
-# CC Switch
+# Claude Code —— 你的AI编程搭档
 
-封号风险 → 使用 <strong text-green-300>CC Switch</strong> 切换模型<br/>
+<div mt-3 />
 
-DeepSeek v4-pro 付费：<a href="https://platform.deepseek.com/" target="_blank">platform.deepseek.com</a>
+<div border="~ green-400/20" bg="green-400/5" rounded-xl p-4 mb-4>
+  <div text-sm opacity-80>
+    <strong>Claude Code</strong> 是由 Anthropic 推出的终端原生 AI 编程助手。它直接运行在命令行中，不仅能生成代码，还能<strong text-green-300>自主读取整个项目、跨文件修改、运行 Shell 命令和测试</strong>，是实现人机协同开发的强大工具。
+  </div>
+</div>
+
+<div text-lg font-bold text-green-400 mb-3>CLI 与网页版 AI 有何不同？</div>
+
+<div grid grid-cols-2 gap-4>
+  <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4>
+    <div text-blue-300 font-bold text-sm mb-1>🌐 网页版聊天机器人</div>
+    <div text-xs opacity-70>只知道你<strong>粘贴给它的代码片段</strong>，缺乏对项目整体结构的理解</div>
+  </div>
+  <div v-click border="~ green-400/20" bg="green-400/5" rounded-xl p-4>
+    <div text-green-300 font-bold text-sm mb-1>💻 Claude Code（CLI）</div>
+    <div text-xs opacity-70><strong>扫描整个代码库</strong>，对项目结构、文件依赖和业务逻辑有全局理解</div>
+  </div>
+  <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4>
+    <div text-blue-300 font-bold text-sm mb-1>💬 "给出建议"</div>
+    <div text-xs opacity-70>告诉你应该怎么改，但你得自己动手</div>
+  </div>
+  <div v-click border="~ green-400/20" bg="green-400/5" rounded-xl p-4>
+    <div text-green-300 font-bold text-sm mb-1>⚡ "直接做事"</div>
+    <div text-xs opacity-70>自主搜索、修改代码、运行命令、查看结果——<strong>像一个真实的开发者</strong></div>
+  </div>
+</div>
+
+<div v-click mt-4 text-center>
+  <div border="~ teal-400/30" bg="teal-400/5" rounded-xl p-3 inline-block>
+    <div text-sm text-teal-300>
+      🎯 <strong>不离开终端</strong>，读写文件、执行命令、Git 操作——全部搞定
+    </div>
+  </div>
+</div>
 
 ---
-
-# Prompt
-
-三大基石：Clear, Direct, Specific
-所有高级技巧都建立在清晰的表达之上。
-
-* 消除歧义：不要让 AI 猜。
-* 肯定指令：告诉它做什么，而不是不做什么。
-* 具体语境：像给新员工派活一样交代背景。
-
+layout: default
+clicks: 5
 ---
 
-# Skills
+# Prompt —— 和 AI 对话的艺术
 
-Skills 是 Claude 生态的最新拼图。它解决的是“复用性”问题。
+<div mt-3 />
 
-如果你教会了 Claude “如何撰写符合公司规范的周报”，由于 Context 会重置，下次还得重教一遍。 Skills 允许你将这套指令（Prompt + 相关资料 + 示例）打包成一个“技能包”。
+<div text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400 mb-4>
+  三大基石：Clear · Direct · Specific
+</div>
 
-当在 Claude.ai 或企业版中使用时，系统会根据请求自动挂载相关的 Skill。
+<div border="~ green-400/20" bg="green-400/5" rounded-xl p-4 mb-4>
+  <div text-sm>所有高级技巧都建立在<strong>清晰的表达</strong>之上。Prompt 不是玄学——它就像给新员工派活一样。</div>
+</div>
 
-这相当于给 Claude 安装了“插件”，让它瞬间变成“资深法务”、“专业会计”或“Python 专家”。
+<div grid grid-cols-3 gap-3 mt-4>
+  <div v-click border="~ orange-400/20" bg="orange-400/5" rounded-xl p-4 text-center>
+    <div text-2xl mb-2>🎯</div>
+    <div text-orange-300 font-bold>消除歧义</div>
+    <div text-xs opacity-70 mt-2>不要让 AI 猜。<br/>你说得越具体，<br/>结果越准确</div>
+  </div>
+  <div v-click border="~ green-400/20" bg="green-400/5" rounded-xl p-4 text-center>
+    <div text-2xl mb-2>✅</div>
+    <div text-green-300 font-bold>肯定指令</div>
+    <div text-xs opacity-70 mt-2>告诉它<strong>做什么</strong>，<br/>而不是不做什么。<br/>正面指令更高效</div>
+  </div>
+  <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4 text-center>
+    <div text-2xl mb-2>📋</div>
+    <div text-blue-300 font-bold>具体语境</div>
+    <div text-xs opacity-70 mt-2>像给新员工派活一样，<br/>交代清楚背景、<br/>约束条件和期望</div>
+  </div>
+</div>
 
-1. agent-browser 允许 AI 直接调用无头浏览器执行自动化网页交互和数据抓取。
-2. PDF Master：文档处理神器，支持 PDF 的合并、拆分、提取、OCR 甚至签名。
-3. PPT Master: AI 生成原生可编辑 PPTX，支持任意文档输入
+<div v-click mt-5>
+  <div text-sm font-bold text-green-400 mb-2>🏭 好的 vs 坏的 Prompt 示例：</div>
+  <div grid grid-cols-2 gap-3>
+    <div border="l-4 red-400" bg="red-400/5" rounded-r-lg p-3>
+      <div text-xs text-red-300>❌ "帮我做设备管理系统"</div>
+    </div>
+    <div border="l-4 green-400" bg="green-400/5" rounded-r-lg p-3>
+      <div text-xs text-green-300>✅ "做一个设备巡检记录页面，包含设备名称（下拉选择）、巡检日期、温度、压力、状态、巡检人字段，提交后保存并在列表显示"</div>
+    </div>
+  </div>
+</div>
+
+---
+layout: default
+clicks: 4
+---
+
+# Skills —— Claude 的"插件系统"
+
+<div mt-3 />
+
+<div border="~ green-400/20" bg="green-400/5" rounded-xl p-4 mb-4>
+  <div text-sm>
+    <strong>Skills</strong> 是 Claude 生态的<strong text-green-300>复用性</strong>解决方案。如果你教会了 Claude "如何撰写符合公司规范的周报"，由于对话上下文会重置，下次还得重教一遍。Skills 允许你将这套指令（Prompt + 资料 + 示例）<strong text-green-300>打包成一个"技能包"</strong>，随时挂载。
+  </div>
+</div>
+
+<div text-lg font-bold text-green-400 mb-3>这相当于给 Claude 安装了"插件"，让它秒变专家：</div>
+
+<div grid grid-cols-3 gap-3>
+  <div v-click border="~ orange-400/20" bg="orange-400/5" rounded-xl p-4 text-center>
+    <div text-3xl mb-2>🌐</div>
+    <div text-orange-300 font-bold text-sm>Agent Browser</div>
+    <div text-xs opacity-70 mt-1>AI 直接调用无头浏览器，执行网页交互和数据抓取</div>
+  </div>
+  <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4 text-center>
+    <div text-3xl mb-2>📄</div>
+    <div text-blue-300 font-bold text-sm>PDF Master</div>
+    <div text-xs opacity-70 mt-1>PDF 合并、拆分、提取、OCR 甚至签名——文档处理全搞定</div>
+  </div>
+  <div v-click border="~ green-400/20" bg="green-400/5" rounded-xl p-4 text-center>
+    <div text-3xl mb-2>📊</div>
+    <div text-green-300 font-bold text-sm>PPT Master</div>
+    <div text-xs opacity-70 mt-1>AI 生成原生可编辑的 PPTX，支持任意文档输入</div>
+  </div>
+</div>
+
+<div v-click mt-5>
+  <div border="~ teal-400/20" bg="teal-400/5" rounded-xl p-4 text-center>
+    <div text-sm>
+      💡 <strong text-teal-300>你也能创建自己的 Skill</strong> —— 把"设备巡检报告模板"、"周报格式"、"客户会议纪要结构"打包成技能包，一次创建，永久复用
+    </div>
+  </div>
+</div>
 
 ---
 layout: section
 ---
 
 <h1 text-4xl font-bold>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 3：AI常用提效工具</span>
+  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 3：AI 常用提效工具</span>
 </h1>
 
-<div text-xl opacity-60 mt-4>PPT</div>
+<div text-xl opacity-60 mt-4>不只是编程——AI 在办公场景的全面应用</div>
 
+---
+layout: two-cols-header
+clicks: 4
+---
+
+# AI + 办公文档：告别重复劳动
+
+::left::
+
+<div text-lg font-bold text-green-400 mb-3>📊 PPT 制作</div>
+
+<div space-y-3>
+  <div v-click border="~ orange-400/20" bg="orange-400/5" rounded-xl p-4>
+    <div text-sm font-bold text-orange-300>Gamma / 百度文库 AI</div>
+    <div text-xs opacity-70>输入主题 → AI 自动生成完整演示文稿<br/>配图、排版、动画一步到位</div>
+  </div>
+  <div v-click border="~ orange-400/20" bg="orange-400/5" rounded-xl p-4>
+    <div text-sm font-bold text-orange-300>Claude PPT Master Skill</div>
+    <div text-xs opacity-70>上传 Word/PDF/Markdown 任意文档<br/>直接生成可编辑的 .pptx 文件</div>
+  </div>
+  <div v-click border="~ orange-400/20" bg="orange-400/5" rounded-xl p-4>
+    <div text-sm font-bold text-orange-300>效率对比</div>
+    <div text-xs opacity-70>传统方式：找模板 → 复制粘贴 → 调格式 → <strong>2小时</strong><br/>AI 方式：描述需求 → 生成 → 微调 → <strong text-green-300>15分钟</strong></div>
+  </div>
+</div>
+
+::right::
+
+<div text-lg font-bold text-blue-400 mb-3>📄 文档处理</div>
+
+<div space-y-3>
+  <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4>
+    <div text-sm font-bold text-blue-300>PDF 批量处理</div>
+    <div text-xs opacity-70>合并多个 PDF → 一句话<br/>提取指定页面 → 一句话<br/>OCR 识别扫描件 → 一句话</div>
+  </div>
+  <div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4>
+    <div text-sm font-bold text-blue-300>智能摘要与翻译</div>
+    <div text-xs opacity-70>长文档 → 3 句话总结要点<br/>中文报告 → 英文版本<br/>会议纪要 → 待办事项清单</div>
+  </div>
+</div>
+
+---
+layout: default
+clicks: 4
+---
+
+# AI + 数据处理：Excel 的终极进化
+
+<div mt-4 />
+
+<div grid grid-cols-2 gap-4>
+
+<div>
+  <div text-lg font-bold text-red-400 mb-3>📈 传统 Excel 的痛点</div>
+  <div space-y-2>
+    <div v-click border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
+      <div text-sm>😫 复杂公式记不住，每次都得百度</div>
+    </div>
+    <div v-click border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
+      <div text-sm>😫 多人协作版本混乱，"最终版_v3_final.xlsx"</div>
+    </div>
+    <div v-click border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
+      <div text-sm>😫 数据量大了就卡顿、崩溃</div>
+    </div>
+    <div v-click border="~ red-400/20" bg="red-400/5" rounded-lg p-3>
+      <div text-sm>😫 做报表需要手动汇总、透视、画图</div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div text-lg font-bold text-teal-400 mb-3>🤖 AI 时代的解决方案</div>
+  <div space-y-2>
+    <div border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
+      <div text-sm>✨ "本月的异常记录按设备分类汇总"</div>
+      <div text-xs opacity-60>→ AI 自动写 SQL/公式，秒出结果</div>
+    </div>
+    <div border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
+      <div text-sm>✨ "把这三张表合并，去重后导出"</div>
+      <div text-xs opacity-60>→ AI 生成处理脚本，一键完成</div>
+    </div>
+    <div border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
+      <div text-sm>✨ "帮我分析这组数据的趋势和异常点"</div>
+      <div text-xs opacity-60>→ AI 直接给出结论 + 可视化图表</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div mt-4 text-center>
+  <div border="~ green-400/30" bg="green-400/5" rounded-xl p-3 inline-block>
+    <div text-sm>
+      <strong text-green-300>从"操作工"到"指挥官"</strong> —— 你只管描述你想要什么结果，AI 帮你操作数据
+    </div>
+  </div>
+</div>
+
+---
+layout: default
+clicks: 3
+---
+
+# AI + 自动化工作流
+
+<div mt-4 />
+
+<div text-lg font-bold text-green-400 mb-4>把重复性任务交给 AI，你只需要做决策</div>
+
+<div grid grid-cols-3 gap-4>
+
+<div v-click border="~ orange-400/20" bg="orange-400/5" rounded-xl p-5 text-center>
+  <div text-3xl mb-3>📧</div>
+  <div text-orange-300 font-bold text-sm mb-2>邮件与沟通</div>
+  <ul text-xs text-left space-y-1 opacity-75>
+    <li>• "帮我把这封英文邮件翻译并回复"</li>
+    <li>• "从这串邮件中提取待办事项"</li>
+    <li>• "根据这个客户对话写跟进纪要"</li>
+    <li>• "生成本周工作周报发给团队"</li>
+  </ul>
+</div>
+
+<div v-click border="~ blue-400/20" bg="blue-400/5" rounded-xl p-5 text-center>
+  <div text-3xl mb-3>🔍</div>
+  <div text-blue-300 font-bold text-sm mb-2>信息检索</div>
+  <ul text-xs text-left space-y-1 opacity-75>
+    <li>• "搜索2025年所有关于XX的邮件"</li>
+    <li>• "查一下这个设备的故障历史记录"</li>
+    <li>• "对比三家供应商的报价方案"</li>
+    <li>• "找一下这个行业的最新标准文档"</li>
+  </ul>
+</div>
+
+<div v-click border="~ green-400/20" bg="green-400/5" rounded-xl p-5 text-center>
+  <div text-3xl mb-3>⚙️</div>
+  <div text-green-300 font-bold text-sm mb-2>流程自动化</div>
+  <ul text-xs text-left space-y-1 opacity-75>
+    <li>• "每周五自动生成巡检数据汇总"</li>
+    <li>• "新数据录入后自动发通知给负责人"</li>
+    <li>• "异常数据自动标记并截屏保存"</li>
+    <li>• "库存低于阈值自动发邮件提醒"</li>
+  </ul>
+</div>
+
+</div>
+
+<div mt-5 text-center>
+  <div border="~ teal-400/20" bg="teal-400/5" rounded-xl p-4 inline-block>
+    <div text-base>
+      💡 <strong text-teal-300>核心思路</strong>：你发现痛点 → 描述给 AI → AI 做工具解决 → 你专注更有价值的事
+    </div>
+  </div>
+</div>
 
 ---
 layout: section
@@ -172,19 +595,33 @@ layout: section
 <div text-xl opacity-60 mt-4>你的AI编程搭档，和全新的编程方式</div>
 
 ---
+layout: default
+---
 
-# 提纲
-不是教大家写代码，而是让你有能力用AI帮你做一个属于自己的小工具
+# Vibe Coding 提纲
 
+<div mt-2 text-sm opacity-60>不是教大家写代码，而是让你有能力用 AI 帮你做一个属于自己的小工具</div>
 
-* ✅ 每个人能在自己电脑跑起来一个Web应用，并可部署到互联网
-* ✅ 知道怎么用AI一步步“对话开发”
-* ✅ 敢于把业务需求转化成工具尝试
-- 🤖 **上手 Claude Code** —— 你的AI编程搭档
-- ✨ **掌握 Vibe Coding** —— 用对话的方式写应用
-- 🏭 **动手做出一个真实业务应用** —— 团队待办事项看板
-- 🌐 **看懂Web应用的全貌** —— 前端、后端、数据库
-- 🚀 **部署到互联网** —— 用手机扫码就能用
+<div mt-4 grid grid-cols-2 gap-3>
+  <div border="~ green-400/20" bg="green-400/5" rounded-xl p-4>
+    <div text-green-400 font-bold text-lg mb-2>🎯 今天的目标</div>
+    <ul text-sm space-y-1 opacity-80>
+      <li>✅ 每个人在自己电脑跑起一个 Web 应用，并可部署到互联网</li>
+      <li>✅ 知道怎么用 AI 一步步"对话开发"</li>
+      <li>✅ 敢于把业务需求转化成工具尝试</li>
+    </ul>
+  </div>
+  <div border="~ blue-400/20" bg="blue-400/5" rounded-xl p-4>
+    <div text-blue-400 font-bold text-lg mb-2>🗺️ 学习路径</div>
+    <ul text-sm space-y-1 opacity-80>
+      <li>🤖 <strong>上手 Claude Code</strong> —— 你的AI编程搭档</li>
+      <li>✨ <strong>掌握 Vibe Coding</strong> —— 用对话的方式写应用</li>
+      <li>🏭 <strong>动手做出真实业务应用</strong> —— 团队待办事项看板</li>
+      <li>🌐 <strong>看懂Web应用的全貌</strong> —— 前端、后端、数据库</li>
+      <li>🚀 <strong>部署到互联网</strong> —— 手机扫码就能用</li>
+    </ul>
+  </div>
+</div>
 
 ---
 layout: center
@@ -222,24 +659,27 @@ layout: center
 
 ---
 layout: two-cols-header
+clicks: 6
 ---
 
-# 关于AI基本概念
-核心认知：你已经是”创造者”
+# 关于 AI 的核心认知
 
-  Vibe Coding 的门槛不是技术，而是：<strong text-green-300>敢开始 + 愿意试 + 小步迭代</strong>
+<div text-lg text-center mb-4>
+  <span text-green-300 font-bold>你已经是"创造者"</span>
+  <span text-sm opacity-60> —— Vibe Coding 的门槛不是技术，而是：<strong text-green-300>敢开始 + 愿意试 + 小步迭代</strong></span>
+</div>
 
 ::left::
-<div mt-4 space-y-3>
-  <div border=”~ green-400” bg=”green-400/5” rounded-lg p-3>
+<div mt-2 space-y-3>
+  <div v-click border="~ green-400/30" bg="green-400/5" rounded-lg p-3>
     <div text-green-400 text-sm font-bold>1. 你已拥有一个AI开发团队</div>
     <div text-xs opacity-70>未来不是会不会写代码，而是能不能把想法说清楚，让AI帮你实现</div>
   </div>
-  <div border=”~ green-400” bg=”green-400/5” rounded-lg p-3>
+  <div v-click border="~ green-400/30" bg="green-400/5" rounded-lg p-3>
     <div text-green-400 text-sm font-bold>2. Vibe Coding = 对话编程</div>
     <div text-xs opacity-70>想法 → 描述需求 → AI生成代码 → 你测试 → 修改迭代</div>
   </div>
-  <div border=”~ green-400” bg=”green-400/5” rounded-lg p-3>
+  <div v-click border="~ green-400/30" bg="green-400/5" rounded-lg p-3>
     <div text-green-400 text-sm font-bold>3. 你的核心能力不是写代码</div>
     <div text-xs opacity-70>清楚表达需求 · 能判断结果对不对 · 会逐步拆解问题</div>
   </div>
@@ -248,36 +688,36 @@ layout: two-cols-header
 ::right::
 
 <div text-lg font-bold mb-4>
-  <span text-green-400>🔍 常见误区</span>
+  <span text-green-400>🔍 常见误区 vs 正确心态</span>
 </div>
 
-<div space-y-3 text-sm>
-  <div flex items-center gap-2>
+<div space-y-2 text-sm>
+  <div v-click flex items-center gap-2>
     <span text-red-400>❌ 先学编程再开始</span>
     <span text-xs opacity-30>→</span>
     <span text-green-400>✅ 边做边学，直接开始</span>
   </div>
-  <div flex items-center gap-2>
+  <div v-click flex items-center gap-2>
     <span text-red-400>❌ 一上来就做完整系统</span>
     <span text-xs opacity-30>→</span>
     <span text-green-400>✅ 从一个小工具开始</span>
   </div>
-  <div flex items-center gap-2>
+  <div v-click flex items-center gap-2>
     <span text-red-400>❌ AI一次必须做对</span>
     <span text-xs opacity-30>→</span>
     <span text-green-400>✅ 多轮对话不断优化</span>
   </div>
-  <div flex items-center gap-2>
+  <div v-click flex items-center gap-2>
     <span text-red-400>❌ 看不懂代码就用不了</span>
     <span text-xs opacity-30>→</span>
     <span text-green-400>✅ 会用 + 会改需求就够</span>
   </div>
-  <div flex items-center gap-2>
+  <div v-click flex items-center gap-2>
     <span text-red-400>❌ 这个太简单没价值</span>
     <span text-xs opacity-30>→</span>
     <span text-green-400>✅ 小工具也能提升效率</span>
   </div>
-  <div flex items-center gap-2>
+  <div v-click flex items-center gap-2>
     <span text-red-400>❌ 业务太复杂AI做不了</span>
     <span text-xs opacity-30>→</span>
     <span text-green-400>✅ 越贴近业务越有价值</span>
@@ -289,8 +729,10 @@ layout: two-cols-header
 ---
 
 # Web应用架构
-前端、后端、数据库 
 
+<div text-lg text-center mb-3>
+  <span text-green-300>前端 · 后端 · 数据库 —— 30秒理解整个 Web 世界</span>
+</div>
 
 ::left::
 
@@ -318,41 +760,44 @@ layout: two-cols-header
 
 | Web应用 | 工业系统 |
 |---|---|
-| 浏览器/前端 | HMI触摸屏 |
-| 后端服务器 | PLC/DCS控制器 |
-| 数据库 | SCADA历史归档 |
-| API接口 | Modbus/OPC-UA |
+| 浏览器 / 前端 | HMI 触摸屏 |
+| 后端服务器 | PLC / DCS 控制器 |
+| 数据库 | SCADA 历史归档 |
+| API 接口 | Modbus / OPC-UA |
 
 </div>
 
 <div text-center mt-4 text-base opacity-70>
-  本质上就是<strong text-green-300>同一套架构</strong>，换了个名字而已。
+  本质上就是<strong text-green-300>同一套架构</strong>，换了个名字而已。你早就懂了。
 </div>
 
 ---
 layout: two-cols
+clicks: 3
 ---
 
 # 前端是什么？
 
-<div mt-6 />
+<div mt-4 />
 
-<div border="~ orange-400/30" bg="orange-400/5" rounded-xl p-4 mb-3>
-  <div text-lg font-bold text-orange-400>HTML</div>
-  <div text-sm opacity-75>构建页面内容结构</div>
-  <div text-xs opacity-50 mt-1>≈ HMI画面上的图形元素</div>
-</div>
+<div space-y-3>
+  <div v-click border="~ orange-400/30" bg="orange-400/5" rounded-xl p-4>
+    <div text-lg font-bold text-orange-400>HTML</div>
+    <div text-sm opacity-75>构建页面内容结构</div>
+    <div text-xs opacity-50 mt-1>≈ HMI画面上的图形元素</div>
+  </div>
 
-<div border="~ blue-400/30" bg="blue-400/5" rounded-xl p-4 mb-3>
-  <div text-lg font-bold text-blue-400>CSS</div>
-  <div text-sm opacity-75>控制颜色、布局、样式</div>
-  <div text-xs opacity-50 mt-1>≈ HMI的配色方案和排版</div>
-</div>
+  <div v-click border="~ blue-400/30" bg="blue-400/5" rounded-xl p-4>
+    <div text-lg font-bold text-blue-400>CSS</div>
+    <div text-sm opacity-75>控制颜色、布局、样式</div>
+    <div text-xs opacity-50 mt-1>≈ HMI的配色方案和排版</div>
+  </div>
 
-<div border="~ yellow-400/30" bg="yellow-400/5" rounded-xl p-4 mb-3>
-  <div text-lg font-bold text-yellow-400>JavaScript</div>
-  <div text-sm opacity-75>处理点击、输入、动态交互</div>
-  <div text-xs opacity-50 mt-1>≈ HMI绑定的脚本和逻辑</div>
+  <div v-click border="~ yellow-400/30" bg="yellow-400/5" rounded-xl p-4>
+    <div text-lg font-bold text-yellow-400>JavaScript</div>
+    <div text-sm opacity-75>处理点击、输入、动态交互</div>
+    <div text-xs opacity-50 mt-1>≈ HMI绑定的脚本和逻辑</div>
+  </div>
 </div>
 
 ::right::
@@ -385,6 +830,7 @@ layout: two-cols
 
 ---
 layout: two-cols-header
+clicks: 4
 ---
 
 # 数据库是什么？
@@ -395,34 +841,45 @@ layout: two-cols-header
 
 | 方式 | 痛点 |
 |---|---|
-| 纸质表格 | 难查找、易丢失、难汇总 |
-| Excel | 多人协作乱、格式不统一 |
-| 笔记/微信 | 碎片化、无法分析 |
+| 📋 纸质表格 | 难查找、易丢失、难汇总 |
+| 📊 Excel | 多人协作乱、格式不统一 |
+| 💬 笔记/微信 | 碎片化、无法分析 |
 
-<div mt-4 />
+<div v-click mt-4 />
 
 | 用数据库之后 | 效果 |
 |---|---|
-| 秒级搜索 | 一键统计 |
-| 多人同时用 | 格式规范 |
-| 结构化存储 | 可分析趋势 |
+| ⚡ 秒级搜索 | 一键统计 |
+| 👥 多人同时用 | 格式规范 |
+| 📈 结构化存储 | 可分析趋势 |
 
 ::right::
+
 <div text-base font-bold mb-3>数据库的本质：</div>
-<div text-sm opacity-75>
+<div text-sm opacity-75 mb-4>
   数据库就是一个<strong text-green-300>结构化的表格</strong>，<br/>
   你可以把数据存进去，也可以从里面查出来。<br/>
   <strong text-green-300>数据库 = 表格 + 查询功能</strong>
 </div>
 
-<div>数据库类型：</div>
-<ul>
-  <li>关系型数据库：MySQL、PostgreSQL、Oracle</li>
-  <li>非关系型数据库：MongoDB、Redis</li>
-  <li>云数据库：`Supabase`、Firebase</li> 
-</ul>
+<div v-click>
+  <div text-sm font-bold text-green-400 mb-2>常见数据库类型：</div>
+  <ul text-sm space-y-1>
+    <li>🗄️ <strong>关系型</strong>：MySQL、PostgreSQL、Oracle</li>
+    <li>📦 <strong>非关系型</strong>：MongoDB、Redis</li>
+    <li>☁️ <strong>云数据库</strong>：<span text-green-300>Supabase</span>、Firebase</li>
+  </ul>
+</div>
+
+<div v-click mt-3>
+  <div border="~ teal-400/20" bg="teal-400/5" rounded-lg p-3 text-sm>
+    💡 <strong text-teal-300>你不用管理数据库</strong> —— 告诉 Claude 你要存什么数据，它帮你设计表结构、写查询、做迁移
+  </div>
+</div>
+
 ---
 layout: two-cols-header
+clicks: 6
 ---
 
 <h1 flex items-center gap-3 mb-4>
@@ -432,34 +889,34 @@ layout: two-cols-header
 
 ::left::
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
+<div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>📝 帮你写代码</div>
   <div text-sm opacity-75>"帮我做一个设备巡检记录页面"</div>
 </div>
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
+<div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>🐛 帮你修bug</div>
   <div text-sm opacity-75>"点击保存按钮没反应，帮我看看"</div>
 </div>
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
+<div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>➕ 帮你加功能</div>
   <div text-sm opacity-75>"增加一个导出Excel的功能"</div>
 </div>
 
 ::right::
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
+<div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>🔍 帮你读代码</div>
   <div text-sm opacity-75>"解释一下这段代码做了什么"</div>
 </div>
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
+<div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>🎨 帮你调样式</div>
   <div text-sm opacity-75>"把按钮改成施耐德绿色"</div>
 </div>
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
+<div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
   <div text-lg font-bold text-green-400>🚀 帮你部署</div>
   <div text-sm opacity-75>"帮我把这个应用部署到Netlify"</div>
 </div>
@@ -511,6 +968,98 @@ layout: two-cols
 </div>
 
 ---
+layout: default
+clicks: 4
+---
+
+<h1 flex items-center gap-3 mb-4>
+  <span text-3xl>🎯</span>
+  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>好需求 vs 坏需求</span>
+</h1>
+
+<div grid grid-cols-2 gap-6>
+
+<div>
+  <div text-lg font-bold text-red-400 mb-3>❌ 太模糊 —— Claude 只能瞎猜</div>
+  <div space-y-3>
+    <div v-click border="l-4 red-400" bg="red-400/5" rounded-r-xl p-4>
+      <div text-sm text-red-300>"做一个设备管理系统"</div>
+      <div text-xs opacity-50 mt-1>什么设备？哪些功能？谁用？数据存哪里？</div>
+    </div>
+    <div v-click border="l-4 red-400" bg="red-400/5" rounded-r-xl p-4>
+      <div text-sm text-red-300>"帮我写个报表功能"</div>
+      <div text-xs opacity-50 mt-1>什么数据？什么格式？按什么维度汇总？</div>
+    </div>
+    <div v-click border="l-4 red-400" bg="red-400/5" rounded-r-xl p-4>
+      <div text-sm text-red-300>"弄个数据看板"</div>
+      <div text-xs opacity-50 mt-1>哪些指标？实时还是汇总？给谁看？</div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div text-lg font-bold text-green-400 mb-3>✅ 具体清晰 —— Claude "看见"了</div>
+  <div space-y-3>
+    <div v-click border="l-4 green-400" bg="green-400/5" rounded-r-xl p-4>
+      <div text-sm text-green-300 leading-relaxed>
+        "做一个<strong>设备巡检记录页面</strong>，有表单和列表两部分。表单包含<strong>设备名称（下拉选择）、巡检日期、温度读数(°C)、压力读数(bar)、运行状态（正常/关注/异常）、巡检人、备注</strong>。提交后保存到列表，列表按<strong>日期倒序</strong>显示，支持<strong>按设备名称搜索</strong>。"
+      </div>
+      <div text-xs opacity-50 mt-1>做什么 ✓ 有什么字段 ✓ 要怎么交互 ✓</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+<h1 flex items-center gap-3 mb-4>
+  <span text-3xl>📐</span>
+  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>和 Claude 对话的核心公式</span>
+</h1>
+
+<div
+  border="~ green-400/40"
+  bg="green-400/5"
+  rounded-2xl
+  p-8
+  text-center
+  mb-6
+>
+  <div text-2xl font-bold mb-2>
+    一句好需求 = <span text-green-400>做什么</span> + <span text-green-400>有什么字段</span> + <span text-green-400>要怎么交互</span>
+  </div>
+</div>
+
+<div
+  border="~ gray-700"
+  rounded-xl
+  p-5
+  text-left
+  text-base
+  bg="gray-800/50"
+>
+  <div text-sm opacity-50 mb-2>✅ 标准模板：</div>
+  <div text-sm leading-relaxed>
+    "我要做一个<strong text-green-300>【设备巡检记录表】</strong>（做什么），<br/>
+    包含<strong text-green-300>【设备名称、巡检日期、温度、压力、状态、巡检人】</strong>字段（有什么），<br/>
+    提交后<strong text-green-300>【数据保存并显示在列表里，异常记录用红色标出来】</strong>（要怎么交互）。"
+  </div>
+</div>
+
+<div mt-5 text-center>
+  <div border="~ teal-400/20" bg="teal-400/5" rounded-xl p-3 inline-block>
+    <div text-sm>
+      💡 <strong text-teal-300>核心原则</strong>：像给新员工派活一样具体——你交代得越清楚，结果越符合预期
+    </div>
+  </div>
+</div>
+
+---
+layout: default
+---
 
 <div text-2xl font-bold pb-2>
   <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>
@@ -524,8 +1073,8 @@ layout: two-cols
   <div border="~ green-400/20" bg="green-400/5" rounded-xl p-2>
     <div text-base font-bold text-green-400 mb-3>🛠 AI开发工具</div>
     <li>公司电脑 + Vmware虚拟机</li>
-    <li>Archlinx(Omarchy发行版)</li>
-    <li>ClaudeCode + CC Switch</li>
+    <li>Archlinux (Omarchy发行版)</li>
+    <li>Claude Code + CC Switch</li>
     <li>DeepSeek-v4-pro Token计费</li>
     <div text-base font-bold text-green-400 my-3>🛠 应用技术栈</div>
     <ul text-xs space-y-1>
@@ -540,6 +1089,7 @@ layout: two-cols
       <li><strong>Netlify</strong> — SSG/SSR 混合部署</li>
     </ul>
   </div>
+
   <!-- AI功能 + 应用人群 -->
   <div space-y-2>
     <div border="~ green-400/20" bg="green-400/5" rounded-xl p-2>
@@ -609,9 +1159,9 @@ layout: two-cols
 
 </div>
 
-
 ---
 layout: center
+clicks: 5
 ---
 
 <h1 text-3xl font-bold text-center mb-6>
@@ -627,20 +1177,24 @@ layout: center
   text-lg
 >
 
-  <div border="~ gray-600" rounded-lg p-3 mb-3 bg="gray-800/50">
-    <strong>你说出需求</strong>（用自然语言）
+  <div v-click border="~ gray-600" rounded-lg p-4 mb-3 bg="gray-800/50">
+    <strong>1️⃣ 你说出需求</strong>
+    <div text-xs opacity-50 mt-1>用自然语言，像跟同事聊天一样</div>
   </div>
-  <div text-2xl opacity-50>↓</div>
-  <div border="~ gray-600" rounded-lg p-3 mb-3 bg="gray-800/50">
-    <strong>Claude 生成代码</strong>
+  <div v-click text-2xl opacity-50>↓</div>
+  <div v-click border="~ gray-600" rounded-lg p-4 mb-3 bg="gray-800/50">
+    <strong>2️⃣ Claude 生成代码</strong>
+    <div text-xs opacity-50 mt-1>几秒到几分钟，代码就出来了</div>
   </div>
-  <div text-2xl opacity-50>↓</div>
-  <div border="~ gray-600" rounded-lg p-3 mb-3 bg="gray-800/50">
-    <strong>你运行测试、试用</strong>
+  <div v-click text-2xl opacity-50>↓</div>
+  <div v-click border="~ gray-600" rounded-lg p-4 mb-3 bg="gray-800/50">
+    <strong>3️⃣ 你运行测试、试用</strong>
+    <div text-xs opacity-50 mt-1>在浏览器里看效果，实际操作用用看</div>
   </div>
-  <div text-2xl opacity-50>↓</div>
-  <div border="~ green-400/40" rounded-lg p-3 mb-3 bg="green-400/10">
-    <strong>不满意就告诉Claude改 → 满意就继续下一个功能</strong>
+  <div v-click text-2xl opacity-50>↓</div>
+  <div v-click border="~ green-400/40" rounded-lg p-4 bg="green-400/10">
+    <strong>4️⃣ 不满意就告诉Claude改 → 满意就继续下一个功能</strong>
+    <div text-xs opacity-50 mt-1>每轮迭代几分钟到十几分钟</div>
   </div>
 
 </div>
@@ -651,70 +1205,6 @@ layout: center
 </div>
 
 ---
-layout: center
----
-
-<h1 text-3xl font-bold text-center mb-8>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>📐 和Claude对话的核心公式</span>
-</h1>
-
-<div
-  border="~ green-400/40"
-  bg="green-400/5"
-  rounded-2xl
-  p-8
-  text-center
-  mb-6
->
-  <div text-2xl font-bold mb-2>一句好需求 = <span text-green-400>做什么</span> + <span text-green-400>有什么字段</span> + <span text-green-400>要怎么交互</span></div>
-</div>
-
-<div
-  border="~ gray-700"
-  rounded-xl
-  p-5
-  text-left
-  text-base
-  bg="gray-800/50"
->
-  <div text-sm opacity-50 mb-1>✅ 标准模板：</div>
-  "我要做一个<strong text-green-300>【设备巡检记录表】</strong>（做什么），包含<strong text-green-300>【设备名称、巡检日期、温度、压力、状态、巡检人】</strong>字段（有什么），提交后<strong text-green-300>【数据保存并显示在列表里，异常记录用红色标出来】</strong>（要怎么）。"
-</div>
-
----
-layout: two-cols
----
-
-<h1 flex items-center gap-3>
-  <span text-3xl>🎯</span>
-  <span bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent>好需求 vs 坏需求</span>
-</h1>
-
-<div mt-6 />
-
-<div border="l-4 red-400" bg="red-400/5" rounded-r-xl p-5 mb-4>
-  <div text-lg font-bold text-red-400 mb-2>❌ 太模糊</div>
-
-  > "做一个设备管理系统"
-  > "帮我写个报表功能"
-  > "弄个数据看板"
-
-  <div text-sm opacity-60 mt-2>Claude不知道你要什么，只能瞎猜</div>
-</div>
-
-::right::
-
-<div mt-14 />
-
-<div border="l-4 green-400" bg="green-400/5" rounded-r-xl p-5>
-  <div text-lg font-bold text-green-400 mb-2>✅ 具体清晰</div>
-
-  > "做一个设备巡检记录页面，有表单和列表两部分。表单包含设备名称（下拉选择）、巡检日期、温度读数、压力读数、运行状态、巡检人、备注。提交后保存到列表，列表按日期倒序显示，支持按设备名称搜索。"
-
-  <div text-sm opacity-60 mt-2>Claude脑子里能"看见"这个页面</div>
-</div>
-
----
 layout: section
 ---
 
@@ -722,9 +1212,7 @@ layout: section
   <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>Part 5：动手实战</span>
 </h1>
 
-<div text-xl opacity-60 mt-4>从零到上线，打造团队ToDo看板工具</div>
-
-
+<div text-xl opacity-60 mt-4>从零到上线，打造团队 ToDo 看板工具</div>
 
 ---
 layout: two-cols-header
@@ -740,47 +1228,51 @@ layout: two-cols-header
   border="l-4 green-400"
   bg="green-400/10"
   rounded-r-lg
-  p-3
+  p-4
   text-base
 >
-  <strong text-green-300>5分钟</strong> Vibe Coding 实现团队 ToDoList 看板工具
+  <strong text-green-300>⏱️ 5分钟</strong> Vibe Coding 实现团队 ToDoList 看板工具
 </div>
 
-<div mt-4 border="~ gray-700" bg="gray-800/50" rounded-xl p-4>
+<div mt-4 border="~ gray-700" bg="gray-800/50" rounded-xl p-5>
   <div text-sm opacity-60 mb-2>对 Claude 说：</div>
-  <div text-base>
+  <div text-sm leading-relaxed>
     "帮我生成一个待办事项Web应用：<br/>
     1. 添加任务 &nbsp; 2. 标记完成 &nbsp; 3. 删除<br/>
-    2. 页面要简洁<br/>
+    4. 页面要简洁<br/>
     用 HTML + CSS + JavaScript 实现"
   </div>
 </div>
 
+<div mt-4 text-center text-sm>
+  <strong text-green-300>这就是你的第一个 Vibe Coding 对话。从这段话开始，你已经在编程了。</strong>
+</div>
+
 ::right::
 
-<div mt-16 />
+<div mt-8 />
 
 <div text-lg font-bold mb-3>
   <span text-green-400>💡 应用场景建议</span>
 </div>
 
 <div space-y-3 text-sm>
-  <div border="~ orange-400/20" bg="orange-400/5" rounded-lg p-2>
-    <div text-orange-400 font-bold text-xs>销售类</div>
-    <div text-xs opacity-70>客户跟进 · 项目看板 · 报价记录 · 客户培训</div>
+  <div border="~ orange-400/20" bg="orange-400/5" rounded-lg p-3>
+    <div text-orange-400 font-bold text-xs mb-1>销售类</div>
+    <div text-xs opacity-70>客户跟进 · 项目看板 · 报价记录 · 客户培训管理</div>
   </div>
-  <div border="~ blue-400/20" bg="blue-400/5" rounded-lg p-2>
-    <div text-blue-400 font-bold text-xs>管理类</div>
-    <div text-xs opacity-70>团队任务 · KPI追踪 · 会议纪要</div>
+  <div border="~ blue-400/20" bg="blue-400/5" rounded-lg p-3>
+    <div text-blue-400 font-bold text-xs mb-1>管理类</div>
+    <div text-xs opacity-70>团队任务 · KPI追踪 · 会议纪要 · 项目周报</div>
   </div>
-  <div border="~ green-400/20" bg="green-400/5" rounded-lg p-2>
-    <div text-green-400 font-bold text-xs>生活类 <span text-xs opacity-50>（降低心理门槛）</span></div>
-    <div text-xs opacity-70>健身记录 · 旅行计划 · 儿童教学</div>
+  <div border="~ green-400/20" bg="green-400/5" rounded-lg p-3>
+    <div text-green-400 font-bold text-xs mb-1>生活类 <span text-xs opacity-50>（降低心理门槛）</span></div>
+    <div text-xs opacity-70>健身记录 · 旅行计划 · 学习打卡 · 家庭账单</div>
   </div>
 </div>
 
 <div mt-4 text-center text-sm>
-  <strong text-green-300>先从一个极简Demo开始，感受AI编程的节奏</strong>
+  <strong text-green-300>先从一个极简 Demo 开始，感受 AI 编程的节奏</strong>
 </div>
 
 ---
@@ -841,6 +1333,7 @@ layout: default
 
 ---
 layout: default
+clicks: 4
 ---
 
 <h1 flex items-center gap-3>
@@ -876,24 +1369,27 @@ layout: default
 </div>
 
 <div grid grid-cols-3 gap-3 mt-4>
-  <div border="~ gray-700" rounded-lg p-3 text-center text-sm>
-    <div text-green-400 font-bold>创建项目结构</div>
+  <div v-click border="~ gray-700" rounded-lg p-3 text-center text-sm>
+    <div text-green-400 font-bold>📁 创建项目结构</div>
+    <div text-xs opacity-50>生成所有需要的文件和文件夹</div>
   </div>
-  <div border="~ gray-700" rounded-lg p-3 text-center text-sm>
-    <div text-green-400 font-bold>配置数据库</div>
+  <div v-click border="~ gray-700" rounded-lg p-3 text-center text-sm>
+    <div text-green-400 font-bold>🗄️ 配置数据库</div>
+    <div text-xs opacity-50>创建表和字段，设置数据关系</div>
   </div>
-  <div border="~ gray-700" rounded-lg p-3 text-center text-sm>
-    <div text-green-400 font-bold>给你运行命令</div>
+  <div v-click border="~ gray-700" rounded-lg p-3 text-center text-sm>
+    <div text-green-400 font-bold>▶️ 给你运行命令</div>
+    <div text-xs opacity-50>告诉你敲什么命令启动应用</div>
   </div>
 </div>
 
-<div text-center mt-4 text-base>
-  <strong text-green-300>你只需要跟着Claude的指引操作。</strong>
+<div v-click text-center mt-4 text-base>
+  <strong text-green-300>你只需要跟着Claude的指引操作，不需要写一行代码。</strong>
 </div>
 
 ---
 layout: two-cols-header
-clicks: 5
+clicks: 6
 ---
 
 <h1 flex items-center gap-3 mb-4>
@@ -903,36 +1399,41 @@ clicks: 5
 
 ::left::
 
-<div border="~ gray-700" rounded-xl p-4>
-  <div text-lg font-bold mb-2 text-green-400>运行</div>
-  <div text-sm opacity-75 mb-1>对 Claude 说：</div>
+<div border="~ gray-700" rounded-xl p-5>
+  <div text-lg font-bold mb-3 text-green-400>▶️ 运行</div>
+  <div text-sm opacity-75 mb-2>对 Claude 说：</div>
 
-  > "帮我运行起来，让我看看效果"
+  <div border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
+    > "帮我运行起来，让我看看效果"
+  </div>
 
-  <div mt-3 text-sm opacity-75>
+  <div mt-4 text-sm opacity-75>
     几分钟内就能在浏览器里看到一个能用的应用：
   </div>
-  <div text-sm mt-1>🟢 巡检表单页面</div>
-  <div text-sm>🟢 记录列表页面</div>
-  <div text-sm>🟢 施耐德绿色主题</div>
+  <div text-sm mt-1 space-y-1>
+    <div v-click>🟢 巡检表单页面</div>
+    <div v-click>🟢 记录列表页面</div>
+    <div v-click>🟢 施耐德绿色主题</div>
+  </div>
 </div>
 
 ::right::
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4>
-  <div text-lg font-bold mb-2 text-green-400>迭代改进</div>
-  <div text-sm opacity-75 mb-1>试用后告诉Claude要改什么：</div>
+<div border="~ green-400/30" bg="green-400/5" rounded-xl p-5>
+  <div text-lg font-bold mb-3 text-green-400>🔄 迭代改进</div>
+  <div text-sm opacity-75 mb-2>试用后告诉Claude要改什么：</div>
 
-<v-clicks>
-
-  > "表单里增加一个'巡检类型'字段"
-
-  > "异常记录用红色背景显示"
-
-  > "加搜索框，按设备名称搜索"
-
-</v-clicks>
-
+  <div space-y-2>
+    <div v-click border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
+      > "表单里增加一个'巡检类型'字段"
+    </div>
+    <div v-click border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
+      > "异常记录用红色背景显示"
+    </div>
+    <div v-click border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
+      > "加搜索框，按设备名称搜索"
+    </div>
+  </div>
 </div>
 
 <div text-center mt-4 text-base>
@@ -953,37 +1454,38 @@ clicks: 5
 
 <div grid grid-cols-1 gap-2>
   <div border="~ gray-700" rounded-xl p-4>
-    <div text-sm font-bold text-green-400>第1轮：异常自动判断</div>
+    <div text-sm font-bold text-green-400>🔄 第1轮：异常自动判断</div>
     <div text-sm opacity-75 mt-1>"表单提交时，温度超过75度或压力超过3.0bar，自动标记为异常"</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
-    <div text-sm font-bold text-green-400>第2轮：仪表盘概览</div>
+    <div text-sm font-bold text-green-400>📊 第2轮：仪表盘概览</div>
     <div text-sm opacity-75 mt-1>"加一个首页仪表盘，显示今日巡检总数、异常记录数、本月趋势，用卡片布局"</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
-    <div text-sm font-bold text-green-400>第3轮：导出Excel</div>
+    <div text-sm font-bold text-green-400>📥 第3轮：导出Excel</div>
     <div text-sm opacity-75 mt-1>"加导出按钮，把筛选后的巡检记录导出为Excel文件"</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
-    <div text-sm font-bold text-green-400>第4轮：手机端适配</div>
+    <div text-sm font-bold text-green-400>📱 第4轮：手机端适配</div>
     <div text-sm opacity-75 mt-1>"帮我把移动端的显示效果优化，按钮和字体放大"</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
-    <div text-sm font-bold text-green-400>第5轮：保养提醒</div>
+    <div text-sm font-bold text-green-400>⏰ 第5轮：保养提醒</div>
     <div text-sm opacity-75 mt-1>"加保养到期提醒：设备增加下次保养日期，到期前3天红色提醒"</div>
   </div>
 </div>
 
-<div text-center  text-base>
+<div v-click text-center mt-6 text-base>
   <strong text-green-300>每轮几分钟到十几分钟。一个下午，完整的巡检系统就出来了。</strong>
 </div>
 
 ---
 layout: two-cols
+clicks: 3
 ---
 
 <h1 flex items-center gap-3>
@@ -995,19 +1497,19 @@ layout: two-cols
 
 | 方案 | 特点 | 适合场景 |
 |---|---|---|
-| SQLite | 单文件，零配置 | 个人/小团队内部 |
-| Supabase | 在线库，免费额度 | 多人异地使用 |
-| localStorage | 存浏览器里 | 纯Demo/个人用 |
+| SQLite | 单文件，零配置 | 个人/小团队内部使用 |
+| Supabase | 在线库，免费额度 | 多人异地协作使用 |
+| localStorage | 存浏览器里 | 纯Demo/快速原型验证 |
 
 <div mt-4 />
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4>
-  <div text-sm font-bold text-green-400>怎么跟 Claude 说：</div>
+<div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4>
+  <div text-sm font-bold text-green-400>💬 怎么跟 Claude 说：</div>
   <div text-sm mt-1>
-    > "用SQLite做数据库" <span text-xs opacity-50>（推荐起步方案）</span>
+    > "用SQLite做数据库" <span text-xs opacity-50>（推荐起步方案，最简单）</span>
   </div>
   <div text-sm mt-1>
-    > "改用Supabase，让多人用" <span text-xs opacity-50>（需要多人协作时）</span>
+    > "改用Supabase，让多人用" <span text-xs opacity-50>（需要多人协作时迁移）</span>
   </div>
 </div>
 
@@ -1030,24 +1532,26 @@ layout: two-cols
       表结构、查询、迁移<br/>
       它全搞定
     </div>
+    <div v-click text-sm opacity-60 mt-3>
+      💡 后期从 SQLite 切到 Supabase？<br/>告诉 Claude 一句就行
+    </div>
   </div>
 </div>
 
 ---
+layout: default
+clicks: 4
+---
 
-# 部署上线
-让你的应用真正在互联网上运行
+# 部署上线 —— 让你的应用真正在互联网上运行
 
-
-<h1 text-3xl font-bold text-center mb-6>
-  <span text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400>什么是部署？</span>
-</h1>
+<div mt-2 />
 
 <div
   border="~ green-400/30"
   bg="green-400/5"
   rounded-2xl
-  p-8
+  p-6
   text-center
   mb-4
 >
@@ -1055,28 +1559,32 @@ layout: two-cols
     部署 = 把你的代码放到一台<span text-green-400>24小时运行的公网服务器</span>上
   </div>
 
-  <div grid grid-cols-3 gap-4 text-sm mt-6>
-    <div>
+  <div grid grid-cols-3 gap-4 text-sm mt-4>
+    <div v-click>
       <div text-3xl mb-2>📱</div>
-      <div>手机浏览器就能打开</div>
+      <div font-bold>手机就能打开</div>
+      <div text-xs opacity-50>浏览器输入网址即可</div>
     </div>
-    <div>
+    <div v-click>
       <div text-3xl mb-2>🔗</div>
-      <div>链接分享给同事就能用</div>
+      <div font-bold>链接分享即用</div>
+      <div text-xs opacity-50>发给同事就能打开</div>
     </div>
-    <div>
+    <div v-click>
       <div text-3xl mb-2>🚫</div>
-      <div>不用打开Claude Code</div>
+      <div font-bold>不用装任何软件</div>
+      <div text-xs opacity-50>不用打开 Claude Code</div>
     </div>
   </div>
 </div>
 
-<div text-center text-lg>
-  用 <strong text-green-300>Netlify</strong> 部署，免费，一句话搞定。
+<div v-click text-center text-lg>
+  🚀 用 <strong text-green-300>Netlify</strong> 部署，<strong>免费</strong>，一句话搞定。
 </div>
 
 ---
 layout: two-cols-header
+clicks: 5
 ---
 
 <h1 flex items-center gap-3 mb-4>
@@ -1086,45 +1594,45 @@ layout: two-cols-header
 
 ::left::
 
-<div border="~ gray-700" rounded-xl p-5>
-  <div text-lg font-bold mb-3 text-green-400>准备工作</div>
-
-  <div text-sm>
-    1. 去 <strong text-green-300>netlify.com</strong> 用GitHub账号注册<br/>
-    2. 把代码推送到GitHub（Claude帮你）
+<div border="~ gray-700" rounded-xl p-5 mb-3>
+  <div text-lg font-bold mb-3 text-green-400>📋 准备工作</div>
+  <div text-sm space-y-2>
+    <div>1️⃣ 去 <strong text-green-300>netlify.com</strong> 用 GitHub 账号注册</div>
+    <div>2️⃣ 把代码推送到 GitHub（Claude 帮你）</div>
   </div>
 </div>
 
-<div border="~ gray-700" rounded-xl p-5 mt-3>
-  <div text-lg font-bold mb-3 text-green-400>然后对Claude说</div>
-
-  > "帮我把项目部署到Netlify"
+<div v-click border="~ gray-700" rounded-xl p-5>
+  <div text-lg font-bold mb-3 text-green-400>💬 然后对 Claude 说</div>
+  <div border="~ gray-600" rounded-lg p-3 bg="gray-800/50" text-sm>
+    > "帮我把项目部署到Netlify"
+  </div>
 </div>
 
 ::right::
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-5>
-  <div text-lg font-bold mb-3 text-green-400>Claude 会自动完成</div>
-
-  <div text-sm>
-    1. 🔧 安装 Netlify CLI<br/>
-    2. 🔑 引导你登录授权<br/>
-    3. 🏗️ 构建项目文件<br/>
-    4. 🚀 上传到Netlify服务器<br/>
-    5. 🔗 给你一个网址<br/>
+<div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-5>
+  <div text-lg font-bold mb-3 text-green-400>🤖 Claude 会自动完成</div>
+  <div text-sm space-y-2>
+    <div v-click>1. 🔧 安装 Netlify CLI</div>
+    <div v-click>2. 🔑 引导你登录授权</div>
+    <div v-click>3. 🏗️ 构建项目文件</div>
+    <div v-click>4. 🚀 上传到 Netlify 服务器</div>
+    <div v-click>5. 🔗 给你一个网址</div>
   </div>
 
-  <div mt-3 text-center text-base>
+  <div v-click mt-3 text-center text-base>
     <code text-green-300>https://xxx.netlify.app</code>
   </div>
 </div>
 
-<div text-center mt-4 text-base>
+<div v-click text-center mt-4 text-base>
   <strong text-green-300>部署成功后，把网址发到手机上就能打开使用。</strong>
 </div>
 
 ---
 layout: two-cols
+clicks: 3
 ---
 
 <h1 flex items-center gap-3>
@@ -1145,21 +1653,31 @@ layout: two-cols
     = 免费的在线数据库 + 后端API<br/>
     开箱即用，有慷慨的免费额度
   </div>
+  <ul text-xs mt-2 space-y-1 opacity-70>
+    <li>🗄️ 自动生成 RESTful API</li>
+    <li>🔐 内置用户认证（登录/注册）</li>
+    <li>🔄 实时数据同步</li>
+    <li>📊 免费 500MB 数据库空间</li>
+  </ul>
 </div>
 
 <div mt-4 />
 
-<div text-sm>
-  <strong>对 Claude 说：</strong>
-  > "帮我把应用改成用Supabase做后端和数据库"
+<div v-click text-sm>
+  <strong>💬 对 Claude 说：</strong>
+  <div border="~ gray-600" rounded-lg p-3 bg="gray-800/50" mt-1>
+    > "帮我把应用改成用Supabase做后端和数据库"
+  </div>
 </div>
 
-<div mt-3 text-sm>
-  <strong>Claude 会帮你：</strong>
-  1. 指导你在 supabase.com 创建项目<br/>
-  2. 设计数据库表结构<br/>
-  3. 生成API调用代码<br/>
-  4. 处理用户登录认证
+<div v-click mt-3 text-sm>
+  <strong>🤖 Claude 会帮你：</strong>
+  <div text-xs opacity-70 mt-1 space-y-1>
+    <div>1. 指导你在 supabase.com 创建项目</div>
+    <div>2. 设计数据库表结构</div>
+    <div>3. 生成 API 调用代码</div>
+    <div>4. 处理用户登录认证</div>
+  </div>
 </div>
 
 ::right::
@@ -1176,10 +1694,13 @@ layout: two-cols
     <div text-xl font-bold mb-2>
       <span text-green-400>全栈应用</span>
     </div>
-    <div text-base opacity-80>
+    <div text-base opacity-80 mb-2>
       前端 → 浏览器里的网页<br/>
       后端 → Supabase API<br/>
       数据库 → PostgreSQL
+    </div>
+    <div v-click text-sm text-teal-300 mt-3>
+      💡 你不需要懂其中任何一项技术<br/>Claude 帮你全部串起来
     </div>
   </div>
 </div>
@@ -1232,11 +1753,12 @@ layout: default
 
 <div text-center mt-3 text-sm opacity-75>
   这些都是施耐德同事日常工作中真实需要的工具。<br/>
-  <strong text-green-300>你来做，因为你最懂需求。</strong>
+  <strong text-green-300>你来做，因为你最懂需求。AI 只是你的工具。</strong>
 </div>
 
 ---
 layout: center
+clicks: 3
 ---
 
 <h1 text-3xl font-bold text-center mb-6>
@@ -1244,17 +1766,17 @@ layout: center
 </h1>
 
 <div flex justify-center gap-6 mt-4>
-  <div border="~ green-400/30" bg="green-400/5" rounded-2xl p-6 text-center flex-1>
+  <div v-click border="~ green-400/30" bg="green-400/5" rounded-2xl p-6 text-center flex-1>
     <div text-4xl mb-3>🧠</div>
     <div text-lg font-bold text-green-400>业务知识</div>
     <div text-sm opacity-70>你最懂产线需要什么<br/>这是AI替代不了的</div>
   </div>
-  <div border="~ green-400/30" bg="green-400/5" rounded-2xl p-6 text-center flex-1>
+  <div v-click border="~ green-400/30" bg="green-400/5" rounded-2xl p-6 text-center flex-1>
     <div text-4xl mb-3>💬</div>
     <div text-lg font-bold text-green-400>清晰表达</div>
     <div text-sm opacity-70>做什么+有什么+要怎么<br/>说出来就行</div>
   </div>
-  <div border="~ green-400/30" bg="green-400/5" rounded-2xl p-6 text-center flex-1>
+  <div v-click border="~ green-400/30" bg="green-400/5" rounded-2xl p-6 text-center flex-1>
     <div text-4xl mb-3>🤖</div>
     <div text-lg font-bold text-green-400>Claude Code</div>
     <div text-sm opacity-70>把需求变成代码<br/>你的AI搭档</div>
@@ -1268,6 +1790,7 @@ layout: center
 
 ---
 layout: two-cols
+clicks: 2
 ---
 
 <h1 flex items-center gap-3>
@@ -1277,29 +1800,31 @@ layout: two-cols
 
 <div mt-4 />
 
-<div border="l-4 green-400" bg="green-400/5" rounded-r-xl p-4 mb-3>
-  <div text-lg font-bold text-green-400 mb-1>✅ 要做的</div>
-  <div text-sm opacity-80>
-    • 用你熟悉的业务语言描述<br/>
-    • 一次只改一个功能<br/>
-    • 生成后立刻运行测试<br/>
-    • 不懂就问"这段代码做了什么？"<br/>
-    • 从小功能开始，逐步复杂
+<div v-click border="l-4 green-400" bg="green-400/5" rounded-r-xl p-4 mb-3>
+  <div text-lg font-bold text-green-400 mb-2>✅ 要做的</div>
+  <div text-sm opacity-80 space-y-1>
+    <div>• 用你熟悉的业务语言描述</div>
+    <div>• 一次只改一个功能</div>
+    <div>• 生成后立刻运行测试</div>
+    <div>• 不懂就问"这段代码做了什么？"</div>
+    <div>• 从小功能开始，逐步复杂</div>
+    <div>• 出现报错直接复制粘贴给 Claude</div>
   </div>
 </div>
 
 ::right::
 
-<div mt-12 />
+<div mt-10 />
 
-<div border="l-4 red-400" bg="red-400/5" rounded-r-xl p-4>
-  <div text-lg font-bold text-red-400 mb-1>❌ 不要做的</div>
-  <div text-sm opacity-80>
-    • 说"做个设备管理系统"（太笼统）<br/>
-    • 一次提10个需求（互相干扰）<br/>
-    • 对问题沉默不管（告诉Claude）<br/>
-    • 不思考照单全收（你说了算）<br/>
-    • 怕犯错（贴错误信息给Claude）
+<div v-click border="l-4 red-400" bg="red-400/5" rounded-r-xl p-4>
+  <div text-lg font-bold text-red-400 mb-2>❌ 不要做的</div>
+  <div text-sm opacity-80 space-y-1>
+    <div>• 说"做个设备管理系统"（太笼统）</div>
+    <div>• 一次提10个需求（互相干扰）</div>
+    <div>• 对问题沉默不管（告诉Claude）</div>
+    <div>• 不思考照单全收（你说了算）</div>
+    <div>• 怕犯错（贴错误信息给Claude）</div>
+    <div>• 一上来就追求完美（先跑起来再说）</div>
   </div>
 </div>
 
@@ -1323,27 +1848,28 @@ clicks: 5
 
   <div v-click border="~ gray-700" rounded-xl p-4>
     <div font-bold text-green-400>Q: Claude生成的代码质量可靠吗？</div>
-    <div text-sm opacity-75>A: 对于业务工具类应用完全够用。需求描述越清晰，代码质量越高。你才是把关的人。</div>
+    <div text-sm opacity-75>A: 对于业务工具类应用完全够用。需求描述越清晰，代码质量越高。你才是最终把关的人——运行看看效果就知道了。</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
     <div font-bold text-green-400>Q: 遇到报错怎么办？</div>
-    <div text-sm opacity-75>A: 把报错信息直接复制给Claude。大多数错误它秒懂，立刻给出修复方案。</div>
+    <div text-sm opacity-75>A: 把报错信息直接复制给Claude。大多数错误它秒懂，立刻给出修复方案。AI 修 AI 的 bug，效率极高。</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
     <div font-bold text-green-400>Q: 在公司可以用吗？数据安全吗？</div>
-    <div text-sm opacity-75>A: 涉及敏感数据可以和IT部门沟通，部署在公司内部。工具都能迁移，Claude也会帮你。</div>
+    <div text-sm opacity-75>A: 涉及敏感数据可以和IT部门沟通，部署在公司内部。工具都能迁移，Claude也会帮你。对于非敏感的个人效率工具，可以直接上手。</div>
   </div>
 
   <div v-click border="~ gray-700" rounded-xl p-4>
     <div font-bold text-green-400>Q: 做出来的应用能给同事用吗？</div>
-    <div text-sm opacity-75>A: 当然！部署到Netlify后就是一个链接，任何人用浏览器都能打开。</div>
+    <div text-sm opacity-75>A: 当然！部署到Netlify后就是一个链接，任何人用浏览器都能打开。不需要安装任何软件，手机电脑平板都可以。</div>
   </div>
 </div>
 
 ---
 layout: center
+clicks: 3
 ---
 
 <h1 text-3xl font-bold text-center mb-8>
@@ -1358,22 +1884,32 @@ layout: center
   text-left
   mb-6
 >
-  <div text-sm opacity-50 mb-2>打开 Claude Code，输入下面这段话：</div>
+  <div text-sm opacity-50 mb-3>🔽 打开 Claude Code，复制输入下面这段话：</div>
 
-  "帮我做一个简单的设备运行日志Web应用：<br/>
-  1. 一个表单页面，字段有：设备名称、日期、班次（早班/中班/晚班）、运行时长(小时)、当日产量、异常备注<br/>
-  2. 提交后数据保存在本地，显示在下面的记录列表里<br/>
-  3. 列表按日期倒序显示，不同班次用不同颜色标记<br/>
-  4. 用HTML+CSS+JS做，数据存在localStorage里"
+  <div border="~ gray-600" rounded-xl p-5 bg="gray-800/50" text-sm leading-relaxed>
+    "帮我做一个简单的设备运行日志Web应用：<br/>
+    1. 一个表单页面，字段有：设备名称、日期、班次（早班/中班/晚班）、运行时长(小时)、当日产量、异常备注<br/>
+    2. 提交后数据保存在本地，显示在下面的记录列表里<br/>
+    3. 列表按日期倒序显示，不同班次用不同颜色标记<br/>
+    4. 用HTML+CSS+JS做，数据存在localStorage里"
+  </div>
 </div>
 
-<div text-center text-lg>
+<div v-click text-center text-lg mb-4>
   <strong text-green-300>这就是你的第一个 Vibe Coding 对话。</strong><br/>
-  <span text-base opacity-60>从这段话开始，你已经在编程了。</span>
+</div>
+
+<div v-click text-center>
+  <div border="~ teal-400/30" bg="teal-400/5" rounded-xl p-4 inline-block">
+    <div text-sm text-teal-300>
+      🎯 从这段话开始，你已经在编程了。不是学编程——而是用编程解决你的实际问题。
+    </div>
+  </div>
 </div>
 
 ---
 layout: two-cols
+clicks: 4
 ---
 
 <h1 flex items-center gap-3>
@@ -1383,19 +1919,19 @@ layout: two-cols
 
 <div mt-4 />
 
-<div border="~ orange-400/30" bg="orange-400/5" rounded-xl p-4 mb-3>
-  <div font-bold text-orange-400>编程基础</div>
-  <div text-sm opacity-75>变量=仪表读数 | 对象=设备台账 | 函数=功能块<br/>条件=联锁逻辑 | 循环=轮询扫描</div>
+<div v-click border="~ orange-400/30" bg="orange-400/5" rounded-xl p-4 mb-3>
+  <div font-bold text-orange-400>🧠 AI 基础认知</div>
+  <div text-sm opacity-75>LLM = 读过海量知识的大脑 | Agent = 能动手做事的智能代理<br/>AI 是工具，你是决策者</div>
 </div>
 
-<div border="~ blue-400/30" bg="blue-400/5" rounded-xl p-4 mb-3>
-  <div font-bold text-blue-400>Web应用</div>
-  <div text-sm opacity-75>前端=HMI | 后端=控制器 | 数据库=历史归档</div>
+<div v-click border="~ blue-400/30" bg="blue-400/5" rounded-xl p-4 mb-3>
+  <div font-bold text-blue-400>🌐 Web 应用架构</div>
+  <div text-sm opacity-75>前端=HMI | 后端=控制器 | 数据库=历史归档<br/>API=Modbus/OPC-UA —— 你早就懂了</div>
 </div>
 
-<div border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
-  <div font-bold text-green-400>Vibe Coding</div>
-  <div text-sm opacity-75>描述需求 → 写代码 → 测试 → 迭代 → 上线</div>
+<div v-click border="~ green-400/30" bg="green-400/5" rounded-xl p-4 mb-3>
+  <div font-bold text-green-400>💬 Vibe Coding</div>
+  <div text-sm opacity-75>描述需求 → AI写代码 → 你测试 → 迭代 → 上线<br/>核心公式：做什么 + 有什么字段 + 要怎么交互</div>
 </div>
 
 ::right::
@@ -1415,13 +1951,17 @@ layout: two-cols
     <div text-base opacity-80>
       Netlify 一键部署<br/>
       免费，手机扫码就能用<br/>
-      链接分享给同事
+      链接分享给同事即可
+    </div>
+    <div v-click text-sm text-teal-300 mt-4>
+      💡 从想法到上线<br/>一个下午就能完成
     </div>
   </div>
 </div>
 
 ---
 layout: center
+clicks: 3
 ---
 
 <h1 text-3xl font-bold text-center mb-8>
@@ -1442,13 +1982,18 @@ layout: center
     <strong text-green-300>从今天起，都是你能亲手解决的问题</strong>
   </div>
 
-  <div text-base opacity-70>
+  <div v-click text-base opacity-70 mt-4>
     工业数字化转型不只是上大系统<br/>
     更是每个人都能为自己做的那些小工具
   </div>
+
+  <div v-click text-base opacity-70 mt-2>
+    你今天学到的不是"怎么编程"<br/>
+    而是<strong text-green-300>"原来我也可以"</strong>
+  </div>
 </div>
 
-<div text-center text-lg>
+<div v-click text-center text-lg>
   打开 <strong text-green-300>Claude Code</strong>，说出你的第一个需求。<br/>
   <span text-sm opacity-50>记住：做什么 + 有什么字段 + 要怎么交互</span>
 </div>
@@ -1465,3 +2010,6 @@ layout: center
   从现在开始，你就是创造者
 </div>
 
+<div text-center mt-4 text-sm opacity-40>
+  有问题随时找我：张官祥 | 18519299525
+</div>
